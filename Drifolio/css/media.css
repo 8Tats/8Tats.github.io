@@ -15,7 +15,7 @@
     }
 }
 @media(max-width: 768px) {
-    .main_headline {
+    .main_headline_wrapper {
         padding-top: 5rem;
     }
     .main_section_wrapper {
@@ -34,11 +34,9 @@
         padding: 6rem .5rem;
     }
 }
-@media(max-width: 600px) {
-    .main_img > img {
-    }
-    .main_headline {
-        padding-top: 8rem;
+@media(max-width: 450px) {
+    .main_section_wrapper {
+        height: 550px;
     }
 }
 @media(max-width: 575px) {

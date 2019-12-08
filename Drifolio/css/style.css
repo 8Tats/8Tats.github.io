@@ -13,16 +13,18 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: #343434;
 }
-.fa {
-    font-size: 4rem;
-    padding-bottom: 1rem;
-}
 * {
     box-sizing: border-box;
 }
 .container {
     padding: 0;
     height: 100%;
+}
+.fa {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+.row > div {
 }
 
 .main_section_wrapper {
@@ -37,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main_headline_wrapper {
     height: 30%;
-    padding-bottom: 4rem;
+    padding-top: 10rem;
 }
 .main_headline > h1 {
     color: #000;
