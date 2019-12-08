@@ -1,0 +1,63 @@
+@media(max-width: 1200px) {
+    .container {
+        min-width: 96%
+    }
+    html {
+        font-size: 9px;
+    }
+    .footer_wrapper {
+        padding-top: 6.5rem;    
+    }
+}
+@media(max-width: 1000px) {
+    .main_section_wrapper {
+        height: 700px;
+    }
+}
+@media(max-width: 768px) {
+    .main_headline {
+        padding-top: 5rem;
+    }
+    .main_section_wrapper {
+        height: 600px;
+    }
+    .section_witch_text {
+        padding: 2rem;
+    }
+    .section_services_wrapper {
+        padding: 2rem .5rem 6rem .5rem;
+    }
+    .section_witch {
+        padding: 2rem 0;
+    }
+    .section_reviews_wrapper {
+        padding: 6rem .5rem;
+    }
+}
+@media(max-width: 600px) {
+    .main_img > img {
+    }
+    .main_headline {
+        padding-top: 8rem;
+    }
+}
+@media(max-width: 575px) {
+    .footer_nav {
+        display: grid;
+        grid-row-gap: .8rem;
+    }
+    .footer_nav > a {
+        font-size: 2.5rem;
+        letter-spacing: .3rem;
+    }
+    .footer_nav > a:first-child {
+        margin-top: 2rem;
+    }
+    .footer_nav > a:last-child {
+        margin-bottom: 2rem;
+    }
+    .section_witch_wrapper {
+        text-align: center;
+    }
+}
+
