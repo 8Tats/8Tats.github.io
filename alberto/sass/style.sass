@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap')
+
+html, body
+  transition: all 0.5s
+  margin: 0
+  padding: 0
+  font-size: 10px
+  font-family: 'Montserrat', sans-serif
+h1, h2, h3, h4, h5, h6, p, span, input
+  outline: none
+  margin: 0
+  padding: 0
+*
+  box-sizing: border-box
+
+
+.dlBtn1
+  position: absolute
+  top: 0
+  right: 3.5rem
+  background-color: rgba(255,255,255,1)
+  border: none
+  color: #000
+  font-weight: 700
+  font-size: 1.4rem
+  border-radius: 0 0 .5rem .5rem
+  letter-spacing: .5rem
+  transition: 0.3s
+  height: 3rem
+  transform: translateY(-.4rem)
+  transition: 0.5s
+  outline: none
+  width: 10rem
+  &:hover
+    transform: translateY(0)
+    box-shadow: 0px 1px 7px 1px rgba(255,255,255,0.75)
+
+.dlBtn2
+  display: none
+  width: 10rem
+  transition: 0.5s
+  top: 0
+  right: 3.5rem
+  position: absolute
+  background-color: rgba(0,0,0,1)
+  border: none
+  color: #fff
+  font-weight: 700
+  font-family: 'Poiret One', cursive
+  font-size: 1.4rem
+  border-radius: 0 0 .5rem .5rem
+  letter-spacing: .5rem
+  outline: none
+  transition: 0.3s
+  height: 3rem
+  transform: translateY(-.4rem)
+  &:hover
+    transform: translateY(0)
+    box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75)
+
+
+.section-1
+  transition: 0.7s
+  display: grid
+  grid-auto-rows: 85% 15%
+  background-image: url(img/mainBgDark.png)
+  height: 100vh
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: right
+
+.headerLogo
+  width: 6.5rem
+  height: 4.3rem
+  background-image: url(img/logoDark.png)
+  background-repeat: no-repeat
+  background-size: cover
+
+.headerWrap
+  z-index: 4
+  position: fixed
+  top: 0
+  left: 0
+  padding: 3rem 0 0 0
+  width: 100%
+  display: flex
+  align-items: center
+
+.header
+  width: 100%
+  background-color: rgba(8,8,8,0)
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  a
+    font-weight: bold
+    font-size: 1.4rem
+    color: #fff
+    margin-right: 2rem
+    transition: all 0.3s
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      bottom: -.2rem
+      left: 0
+      background-color: #BD843A
+      height: 2px
+      width: 0%
+      transition: all 0.3s
+    &:hover
+      color: #BD843A
+      text-decoration: none
+    &:hover::before
+      width: 50%
+    &:last-child
+      margin-right: 4rem
+    &:first-child
+      margin-left: 6rem
+
+
+
+.cart
+  background-image: url(img/cartDark.png)
+  margin-right: 2rem
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  height: 2.5rem
+  width: 2.5rem
+  &::before
+
+.cartLight
+  background-image: url(img/cartLight.png)
+  transition: 0.5s
+
+.shoppingCartWrap
+  width: 16rem
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+
+.shoppingCart
+  transition: 0.5s
+  display: flex
+  align-items: flex-end
+  font-weight: 700
+  > span
+    font-size: 1.6rem
+    color: #fff
+
+.headerLight
+  a
+    color: #4f4f4f
+    transition: 0.5s
+  span
+    color: #4f4f4f
+    transition: 0.5s
+
+.search
+  transition: 0.4s
+  display: flex
+  align-items: flex-end
+  justify-content: flex-end
+  position: relative
+
+.searchInput
+  color: #fff
+  font-weight: 700
+  transition: 0.5s
+  font-size: 1.4rem
+  padding: .2rem .5rem .2rem 0
+  background-color: rgba(0,0,0,0)
+  border: none
+  border-bottom: 1px solid #fff
+  position: absolute
+  width: 0
+  opacity: 0
+
+.shoppingCartActive
+  position: absolute
+  opacity: 0
+
+.searchInputActive
+  width: 100%
+  position: relative
+  opacity: 1
+
+.searchIcon
+  background-image: url(img/searchDark.png)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: 85% 85%
+  height: 2.5rem
+  width: 2.5rem
+  border-bottom: 1px solid #fff
+  cursor: pointer
+
+.searchLight
+  > div
+    background-image: url(img/searchLight.png)
+    border-bottom: 1px solid #4f4f4f
+    transition: 0.5s
+  > input
+    border-bottom: 1px solid #4f4f4f
+    color: #4f4f4f
+    transition: 0.5s
+
+.network
+  z-index: 4
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  letter-spacing: .2rem
+  height: 100%
+  width: 10.3rem
+  > a
+    transform: rotate(-90deg)
+    color: rgba(75,75,75,1)
+    text-decoration: none
+    font-size: 1.6rem
+    position: relative
+    margin: 8rem 0
+    transition: all 0.3s
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      background-color: #BD843A
+      height: 2px
+      width: 0%
+      transition: all 0.3s
+    &:hover
+      color: #BD843A
+    &:hover::before
+      width: 50%
+
+
+.infoCompany
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  > a
+    font-size: 3.5rem
+    text-decoration: none
+    transform: rotate(90deg)
+    color: rgba(255, 255, 255, 0.85)
+    border-radius: 50%
+    border: 2px solid rgba(255, 255, 255, 0.75)
+    height: 5rem
+    width: 5rem
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 400
+  > p
+    font-size: 1.6rem
+    padding-left: 2rem
+    font-weight: 700
+    color: rgba(255, 255, 255, 0.75)
+
+.contacts
+  z-index: 4
+  position: fixed
+  bottom: 4rem
+  left: 0
+  display: flex
+  padding: 0 20rem
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  > div
+    display: flex
+    > p
+      color: rgba(75,75,75,1)
+      font-size: 1.6rem
+      &:first-child
+        padding-right: 5rem
+  > p
+    color: rgba(75,75,75,1)
+    font-size: 1.6rem
+
+.mainHeadlineWrap
+  > div
+    height: 100%
+    display: flex
+    align-items: center
+
+
+.mainHeadline
+  text-align: center
+  > h2
+    color: #fff
+    font-weight: 700
+    font-size: 3.6rem
+    letter-spacing: 0.55em
+    line-height: 4.4rem
+    padding-bottom: 2rem
+  > h1
+    color: #F7AB48
+    font-size: 8.5rem
+    letter-spacing: 2.750rem
+    font-weight: 400
+    font-family: 'Poiret One', cursive
+    line-height: 9.9rem
+    border-top: 1px solid #F7AB48
+    border-bottom: 1px solid #F7AB48
+    display: inline
+    wdth: auto
+    padding: .5rem 0
+  > p
+    padding-top: 2rem
+    padding-bottom: 7rem
+    font-size: 1.6rem
+    color: #fff
+    line-height: 2rem
+
+
+.animationBtn,
+.animationBtn:active,
+.animationBtn:visited,
+.animationBtn:hover,
+.animationBtn2,
+.animationBtn2:hover,
+.animationBtn2:active,
+.animationBtn2:visited,
+.animationBtn3,
+.animationBtn3:hover,
+.animationBtn3:active,
+.animationBtn3:visited,
+.animationBtn4,
+.animationBtn4:hover,
+.animationBtn4:active,
+.animationBtn4:visited
+  display: inline-block
+  font-size: 1.6rem
+  font-weight: 700
+  text-transform: uppercase
+  line-height: 1.7rem
+  padding: 2rem 1.5rem
+  border: 2px solid rgba(247, 171, 72, 0.75)
+  border-right: none
+  color: rgba(247, 171, 72, 0.75)
+  text-decoration: none
+  position: relative
+  transition: all 0.3s
+  &::after
+    transition: all 0.3s
+    content: '→'
+    color: rgba(247, 171, 72, 0.75)
+    position: absolute
+    font-size: 4rem
+    right: -15%
+    top: 28%
+  &:hover
+    border: 2px solid #fff
+    color: #fff
+    border-right: none
+  &:hover::after
+    color: #fff
+
+.animationBtnLight,
+.animationBtnLight:active,
+.animationBtnLight:visited,
+.animationBtnLight:hover,
+.animationBtn2Light,
+.animationBtn2Light:hover,
+.animationBtn2Light:active,
+.animationBtn2Light:visited,
+.animationBtn3Light,
+.animationBtn3Light:hover,
+.animationBtn3Light:active,
+.animationBtn3Light:visited,
+.animationBtn4Light,
+.animationBtn4Light:hover,
+.animationBtn4Light:active,
+.animationBtn4Light:visited
+  display: inline-block
+  font-size: 1.6rem
+  font-weight: 700
+  text-transform: uppercase
+  line-height: 1.7rem
+  padding: 2rem 1.5rem
+  border: 2px solid rgba(247, 171, 72, 0.75)
+  border-right: none
+  color: rgba(247, 171, 72, 0.75)
+  text-decoration: none
+  position: relative
+  transition: all 0.5s
+  &::after
+    transition: all 0.5s
+    content: '→'
+    color: rgba(247, 171, 72, 0.75)
+    position: absolute
+    font-size: 4rem
+    right: -15%
+    top: 28%
+  &:hover
+    border: 2px solid #4f4f4f
+    color: #4f4f4f
+    border-right: none
+  &:hover::after
+    color: #4f4f4f
+
+
+.section-1Light
+  transition: 0.5s
+  background-image: url(img/mainBgLight.png)
+  h2
+    color: #4f4f4f
+  p
+    color: #828282
+
+.infoCompanyLight
+  > a
+    border: 2px solid #828282
+    color: #828282
+
+.s2-contentBox
+  display: grid
+  grid-auto-rows: 10% 75% 15%
+
+.s2-contentBoxCenter
+  padding-top: 2rem
+
+.s2-btnWrapper
+  text-align: center
+
+.subsequentSection
+  transition: 0.5s
+  padding: 10.3rem
+  background-color: #151515
+  height: 100%
+
+.section-3_wrap
+  em
+    color: inherit
+
+.subsequentSectionLight, .section-3_wrapLight
+  transition: 0.5s
+  background-color: #E5E5E5
+
+.s3-contentBox
+  em
+    color: inherit
+
+.contentBox
+  transition: 0.5s
+  padding: 3.2rem 7.7rem
+  color: #fff
+  height: 100%
+  background-color: #1d1d1d
+
+.contentBoxLight, .s3-contentBoxLight
+  transition: 0.5s
+  background-color: #FCF2F2
+  h1
+    color: #333333
+  p
+    color: #4f4f4f
+
+.pForPadding
+  padding-top: 1.6rem
+  color: rgba(255, 255, 255, 0.75)
+  font-size: 1.6rem
+
+.h1-after
+  font-size: 2.4rem
+  font-weight: 700
+  letter-spacing: 2px
+  padding-bottom: 1.6rem
+  position: relative
+  display: inline-block
+  text-transform: uppercase
+  &::after
+    content: ''
+    position: absolute
+    height: 2px
+    width: 50%
+    left: 0
+    bottom: 0
+    background-color: #F7AB48
+
+.featuresWrapper
+  padding-top: 1.5rem
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 2.1rem
+
+
+.iconBoxWrap
+  display: flex
+  align-items: center
+
+.featuresP
+  font-size: 1.4rem
+  padding-left: 2rem
+  text-transform: uppercase
+
+.iconWrap
+  background-color: #F7AB48
+  display: inline-block
+  padding: 1.28rem 1.34rem 1.219rem 1.28rem
+
+.iconWrap3
+  padding: 1.28rem 1.50rem 1.219rem 1.28rem
+
+.iconWrap4
+  padding: 1.28rem 1.268rem 1.219rem 1.28rem
+
+.iconWrap2
+  padding: 1.28rem 1.6rem 1.219rem 1.6rem
+
+.s3-iconWrap
+  background-color: #F7AB48
+  padding: .6rem .8rem 0 .8rem
+  height: 6.4rem
+  display: inline-block
+
+.s3-iconBoxWrap
+  display: flex
+  align-items: center
+  height: 7rem
+  margin-top: 3rem
+
+.s3-featureText
+  height: 95%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.s4-featureText
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.s4-featuresWrapper
+  padding-top: 5rem
+  align-self: start
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 3.3rem
+
+.section-4_wrapLight
+  transition: 0.5s
+  background-color: #E5E5E5
+
+.s4-contentBox
+  display: grid
+  grid-auto-rows: 10% auto 15%
+
+.s4-contentBoxLight
+  transition: 0.5s
+  background-color: #F9FCF2
+  h1
+    color: #333333
+  p
+    color: #4f4f4f
+
+.featuresH5
+  font-size: 1.4rem
+  color: #F7AB48
+  padding-left: 2rem
+  font-weight: bold
+  text-transform: uppercase
+
+.s3-contentBox
+  display: grid
+  grid-auto-rows: 8% 77% 15%
+
+.s3-contentCenterBox
+  display: grid
+  grid-template-columns: 1fr 1fr
+
+.s3-h1
+  grid-column: 1/3
+
+.s3-rightBox
+  background-image: url(img/s3-bgRightBox.png)
+  background-repeat: no-repeat
+  background-size: 85% 90%
+  background-position: top
+
+.s3-rightBoxLight
+  transition: 0.5s
+  background-image: url(img/s3-bgRightBoxLight.png)
+
+.s4-iconWrap
+  padding: .8rem
+  align-self: start
+  > img
+    width: 4.8rem
+    height: 4.8rem
+
+.s3-btnBox
+  grid-column: 1/3
+  text-align: center
+  align-items: end
+  align-items: center
+  > a
+    display: inline-block
+
+.s4-btn
+  text-align: center
+
+.s4-iconBoxWrapper
+  display: flex
+
+.conuterDivWrapper
+  padding: 2rem 5rem 0 5rem
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-column-gap: 18rem
+
+.counterDiv1, .counterDiv2, .counterDiv3
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: right
+  min-height: 10.780rem
+  display: flex
+  align-items: center
+
+.counterDiv1
+  background-image: url(img/01.png)
+
+.counterDiv2
+  background-image: url(img/02.png)
+
+.counterDiv3
+  background-image: url(img/03.png)
+// light styles
+
+.headerLogoLight
+  transition: 0.5s
+  background-image: url(img/logoLight.png)
+
+
+.footerContacts
+  display: flex
+  padding-bottom: 2.4rem
+
+
+.contactsIcon1, .contactsIcon2, .contactsIcon3, .contactsIcon4
+  background-repeat: no-repeat
+  background-position: top
+  background-size: contain
+  height: 3rem
+  width: 3rem
+
+.footerHeadline
+  grid-column: 1/3
+
+.footerContactsWrap
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.contactsIcon1
+  background-image: url(img/footerIcon1.png)
+
+.contactsIcon2
+  background-image: url(img/footerIcon2.png)
+
+.contactsIcon3
+  background-image: url(img/footerIcon3.png)
+
+.contactsIcon4
+  background-image: url(img/footerIcon4.png)
+
+.contantsText
+  > p
+    padding-left: 2.4rem
+    font-size: 1.6rem
+    color: #fff
+
+.contentBoxFooter
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-auto-rows: 15% 75%
+
+.footerNetwork
+  > a
+    color: rgba(255,255,255,0.75)
+    text-decoration: none
+    font-size: 1.6rem
+    position: relative
+    transition: all 0.3s
+    margin-right: 4rem
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      background-color: #BD843A
+      height: 2px
+      width: 0%
+      transition: all 0.3s
+    &:hover
+      color: #BD843A
+    &:hover::before
+      width: 50%
+
+.footerMap
+  > iframe
+    height: 100%
+    width: 100%
+
+.footerWrapLight
+  transition: 0.5s
+  background-color: #E5E5E5
+
+.contentBoxFooterLight
+  transition: 0.5s
+  background-color: #FCFCF2
+  h1
+    color: #333333
+  p
+    color: #4f4f4f
+  a
+    color: #4f4f4f
+
+.contactsIcon1Light
+  transition: 0.5s
+  background-image: url(img/footerIcon1Light.png)
+
+.contactsIcon2Light
+  transition: 0.5s
+  background-image: url(img/footerIcon2Light.png)
+
+.contactsIcon3Light
+  transition: 0.5s
+  background-image: url(img/footerIcon3Light.png)
+
+.contactsIcon4Light
+  transition: 0.5s
+  background-image: url(img/footerIcon4Light.png)
+
+.s5-contentBox
+  background-color: rgba(222, 255, 179, 0.1)
