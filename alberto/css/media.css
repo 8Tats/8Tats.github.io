@@ -1,0 +1,17 @@
+@media(max-width: 1400px) {
+  html {
+    font-size: 8px;
+  }
+  .mainHeadline {
+    padding-left: 13rem;
+  }
+  .s2-btnWrapper, .s4-btn {
+    align-items: flex-end;
+  }
+  .s3-btnBox {
+    align-self: end
+  }
+  .conuterDivWrapper {
+    grid-gap: 10rem
+  }
+}

@@ -158,13 +158,38 @@ h1, h2, h3, h4, h5, h6, p, span, input {
       margin-left: 6rem; }
 
 .cart {
+  display: inline-block;
+  text-decoration: none;
   background-image: url(img/cartDark.png);
   margin-right: 2rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 2.5rem;
-  width: 2.5rem; }
+  width: 2.5rem;
+  position: relative; }
+  .cart::before {
+    content: '10';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #F7AB48;
+    top: 0;
+    -webkit-transform: translateY(-45%) translateX(45%);
+    -ms-transform: translateY(-45%) translateX(45%);
+    transform: translateY(-45%) translateX(45%);
+    right: 0;
+    border-radius: 50%; }
 
 .cartLight {
   background-image: url(img/cartLight.png);
@@ -225,6 +250,14 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   -ms-flex-pack: end;
   justify-content: flex-end;
   position: relative; }
+  .search > input::-webkit-input-placeholder {
+    color: #fff; }
+  .search > input:-ms-input-placeholder {
+    color: #fff; }
+  .search > input::-ms-input-placeholder {
+    color: #fff; }
+  .search > input::placeholder {
+    color: #fff; }
 
 .searchInput {
   color: #fff;
@@ -273,6 +306,14 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
+  .searchLight > input::-webkit-input-placeholder {
+    color: #4f4f4f; }
+  .searchLight > input:-ms-input-placeholder {
+    color: #4f4f4f; }
+  .searchLight > input::-ms-input-placeholder {
+    color: #4f4f4f; }
+  .searchLight > input::placeholder {
+    color: #4f4f4f; }
 
 .network {
   z-index: 4;
@@ -299,7 +340,7 @@ h1, h2, h3, h4, h5, h6, p, span, input {
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    color: #4b4b4b;
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     font-size: 1.6rem;
     position: relative;
@@ -375,18 +416,19 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  color: rgba(255, 255, 255, 0.75);
   width: 100%; }
   .contacts > div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .contacts > div > p {
-      color: #4b4b4b;
+    .contacts > div > a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.75);
       font-size: 1.6rem; }
-      .contacts > div > p:first-child {
+      .contacts > div > a:first-child {
         padding-right: 5rem; }
   .contacts > p {
-    color: #4b4b4b;
     font-size: 1.6rem; }
 
 .mainHeadlineWrap > div {
@@ -633,7 +675,15 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   padding-top: 2rem; }
 
 .s2-btnWrapper {
-  text-align: center; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .subsequentSection {
   -webkit-transition: 0.5s;
@@ -733,22 +783,16 @@ h1, h2, h3, h4, h5, h6, p, span, input {
 
 .s3-iconWrap {
   background-color: #F7AB48;
-  padding: .6rem .8rem 0 .8rem;
-  height: 6.4rem;
+  padding: .6rem .8rem .6rem .8rem;
   display: inline-block; }
 
 .s3-iconBoxWrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 7rem;
   margin-top: 3rem; }
 
 .s3-featureText {
-  height: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,21 +892,30 @@ h1, h2, h3, h4, h5, h6, p, span, input {
     height: 4.8rem; }
 
 .s3-btnBox {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
-  text-align: center;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   .s3-btnBox > a {
-    display: inline-block; }
+    display: inline-block;
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start; }
 
 .s4-btn {
-  text-align: center; }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
 
 .s4-iconBoxWrapper {
   display: -webkit-box;
@@ -1030,4 +1083,159 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   background-image: url(img/footerIcon4Light.png); }
 
 .s5-contentBox {
-  background-color: rgba(222, 255, 179, 0.1); }
+  background-color: rgba(222, 255, 179, 0.1);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6fr 4fr;
+  grid-template-columns: 6fr 4fr;
+  grid-auto-rows: 15% 75%; }
+
+.s5-headline {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3; }
+
+.s5-featuresP {
+  padding-left: 0; }
+
+.s5-advantageH5Headline {
+  font-size: 1.6rem;
+  padding-top: 2rem;
+  padding-left: 0; }
+
+.s5-advantageWrap {
+  padding-left: 3rem; }
+
+.s5-iconBoxWrapper {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.s5-iconBox {
+  height: 3.4rem;
+  width: 3.4rem;
+  background-color: #F7AB48;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .s5-iconBox > span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem; }
+
+.s5-featuresP2 {
+  padding-top: 2rem; }
+
+.networkLight > a {
+  color: #828282; }
+
+.contactsLight > div > a {
+  color: #828282; }
+
+.s5-contentBoxLight {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #F9FCF2; }
+  .s5-contentBoxLight h1 {
+    color: #333333; }
+  .s5-contentBoxLight p {
+    color: #4f4f4f; }
+
+.section-5_wrapLight {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #E5E5E5; }
+
+.sliderWrap {
+  height: 100vh;
+  padding: 200px;
+  width: 100%;
+  background-color: #333333; }
+
+.slider {
+  background-color: #fff;
+  width: 500px;
+  height: 277px;
+  border: 10px solid lime; }
+
+.slides {
+  width: 1000px;
+  border: 10px solid red; }
+  .slides::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .slides > img {
+    width: 250px;
+    height: 277px;
+    float: left; }
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  border-radius: 0%;
+  height: .8rem;
+  width: .4rem;
+  background-color: #fff;
+  margin: 0; }
+
+#fp-nav ul, .fp-slidesNav ul {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#fp-nav ul li:hover a span, .fp-slidesNav ul li a span {
+  border-radius: 0%;
+  height: .8rem;
+  width: .4rem;
+  background-color: #fff;
+  margin: 0; }
+
+#fp-nav ul, .fp-slidesNav ul {
+  position: relative; }
+  #fp-nav ul::after, .fp-slidesNav ul::after {
+    content: '›';
+    color: #fff;
+    position: absolute;
+    top: -6rem;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    font-size: 6.6rem;
+    left: .4rem; }
+  #fp-nav ul::before, .fp-slidesNav ul::before {
+    content: '›';
+    color: #fff;
+    position: absolute;
+    bottom: -6.6rem;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    font-size: 6.6rem;
+    left: 1.6rem; }
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+  background-color: #F7AB48;
+  border-radius: 0%;
+  height: 3rem;
+  width: .4rem;
+  text-align: center;
+  margin: -10px 0; }
+
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip {
+  font-size: 3.6rem;
+  -webkit-transform: translateY(-1.4rem);
+  -ms-transform: translateY(-1.4rem);
+  transform: translateY(-1.4rem); }

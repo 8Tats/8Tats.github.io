@@ -13,6 +13,8 @@ _searchIcon.onclick = function() {
 let btnLight = document.querySelector('.dlBtn1'),
     btnDark = document.querySelector('.dlBtn2'),
     headerLogo = document.querySelector('.headerLogo'),
+    networkLight = document.querySelector('.network'),
+    contactsLight = document.querySelector('.contacts'),
     searchLight = document.querySelector('.search'),
     cartLight = document.querySelector('.cart'),
     mainSecion = document.querySelector('.section-1'),
@@ -34,12 +36,17 @@ let btnLight = document.querySelector('.dlBtn1'),
     contactsIcon3Light = document.querySelector('.contactsIcon3'),
     contactsIcon4Light = document.querySelector('.contactsIcon4'),
     contentBoxFooterLight = document.querySelector('.contentBoxFooter'),
-    s4ContentBox = document.querySelector('.s4-contentBox');
+    s4ContentBox = document.querySelector('.s4-contentBox'),
+    s5ContentBox = document.querySelector('.s5-contentBox'),
+    section5Wrap = document.querySelector('.section-5_wrap');
+
 
 btnLight.onclick = function() {
-  btnDark.style.display = "block"
-  btnLight.style.display = "none"
+  btnDark.style.display = "block";
+  btnLight.style.display = "none";
   headerLogo.classList.add('headerLogoLight');
+  networkLight.classList.add('networkLight');
+  contactsLight.classList.add('contactsLight');
   searchLight.classList.add('searchLight');
   contentBoxFooterLight.classList.add('contentBoxFooterLight');
   cartLight.classList.add('cartLight');
@@ -61,6 +68,8 @@ btnLight.onclick = function() {
   s3RightBoxLight.classList.add('s3-rightBoxLight');
   section4Wrap.classList.add('section-4_wrapLight');
   s4ContentBox.classList.add('s4-contentBoxLight');
+  s5ContentBox.classList.add('s5-contentBoxLight');
+  section5Wrap.classList.add('section-5_wrapLight');
   footerWraplight.classList.add('footerWrapLight');
 };
 
@@ -68,7 +77,10 @@ btnDark.onclick = function() {
   btnLight.style.display = "block"
   btnDark.style.display = "none"
   headerLogo.classList.remove('headerLogoLight');
+  networkLight.classList.remove('networkLight');
+  contactsLight.classList.remove('contactsLight');
   searchLight.classList.remove('searchLight');
+  section5Wrap.classList.remove('section-5_wrapLight');
   contentBoxFooterLight.classList.remove('contentBoxFooterLight');
   cartLight.classList.remove('cartLight');
   contactsIcon1Light.classList.remove('contactsIcon1Light');
@@ -89,5 +101,6 @@ btnDark.onclick = function() {
   s3RightBoxLight.classList.remove('s3-rightBoxLight');
   section4Wrap.classList.remove('section-4_wrapLight');
   s4ContentBox.classList.remove('s4-contentBoxLight');
+  s5ContentBox.classList.remove('s5-contentBoxLight');
   footerWraplight.classList.remove('footerWrapLight');
 };
