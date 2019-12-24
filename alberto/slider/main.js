@@ -6,7 +6,7 @@ let nextBtn = document.getElementById('next'),
 nextBtn.onclick = function() {
   let slides = document.querySelector('.slides');
   nextBtnActive -= 128;
-  if (nextBtnActive <= -512) {
+  if (nextBtnActive < -512) {
     nextBtnActive = 0;
   }
   slides.style.left = nextBtnActive + 'px';
