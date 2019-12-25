@@ -19,6 +19,7 @@ let btnLight = document.querySelector('.dlBtn1'),
     cartLight = document.querySelector('.cart'),
     mainSecion = document.querySelector('.section-1'),
     headerLight = document.querySelector('.header'),
+    slide1Light = document.querySelector('.slide-1'),
     infoCompanyLight = document.querySelector('.infoCompany'),
     animationBtnLight = document.querySelector('.animationBtn'),
     animationBtnLight2 = document.querySelector('.animationBtn2'),
@@ -50,6 +51,7 @@ btnLight.onclick = function() {
   btnLight.style.display = "none";
   headerLogo.classList.add('headerLogoLight');
   networkLight.classList.add('networkLight');
+  slide1Light.classList.add('slide-1Light');
   contactsLight.classList.add('contactsLight');
   searchLight.classList.add('searchLight');
   contentBoxFooterLight.classList.add('contentBoxFooterLight');
