@@ -9,7 +9,6 @@ _searchIcon.onclick = function() {
   _shoppingCart.classList.toggle('shoppingCartActive');
 };
 ////////
-
 let btnLight = document.querySelector('.dlBtn1'),
     btnDark = document.querySelector('.dlBtn2'),
     headerLogo = document.querySelector('.headerLogo'),
@@ -44,7 +43,6 @@ let btnLight = document.querySelector('.dlBtn1'),
     s6ContentBox = document.querySelector('.s6-contentBox'),
     s5ContentBox = document.querySelector('.s5-contentBox'),
     section5Wrap = document.querySelector('.section-5_wrap');
-
 
 btnLight.onclick = function() {
   btnDark.style.display = "block";
