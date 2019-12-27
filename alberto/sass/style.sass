@@ -16,7 +16,9 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 
 .dlBtn1
-  position: absolute
+  border: 10px solid red
+  z-index: 95
+  position: fixed
   top: 0
   right: 3.5rem
   background-color: rgba(255,255,255,1)
@@ -38,11 +40,12 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 .dlBtn2
   display: none
+  z-index: 95
   width: 10rem
   transition: 0.5s
   top: 0
   right: 3.5rem
-  position: absolute
+  position: fixed
   background-color: rgba(0,0,0,1)
   border: none
   color: #fff
@@ -60,7 +63,9 @@ h1, h2, h3, h4, h5, h6, p, span, input
     box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.75)
 
 .section-1-wrap
+  min-width: 100%
   position: relative
+  height: 100vh
 
 .section-1
   position: absolute
@@ -68,10 +73,11 @@ h1, h2, h3, h4, h5, h6, p, span, input
   width: 100%
   top: 0
   left: 0
-  height: 100%
+  height: 90%
   transition: 0.7s
-  display: grid
-  grid-auto-rows: 85% 15%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
 
 .headerLogo
   width: 6.5rem
@@ -80,12 +86,10 @@ h1, h2, h3, h4, h5, h6, p, span, input
   background-repeat: no-repeat
   background-size: cover
 
+
 .headerWrap
-  z-index: 4
-  position: fixed
-  top: 0
-  left: 0
-  padding: 3rem 0 0 0
+  z-index: 93
+  padding: 2.5rem 0 1.5rem 0
   width: 100%
   display: flex
   align-items: center
@@ -231,7 +235,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
       color: #4f4f4f
 
 .network
-  z-index: 4
+  z-index: 93
   position: fixed
   top: 0
   left: 0
@@ -282,6 +286,10 @@ h1, h2, h3, h4, h5, h6, p, span, input
     align-items: center
     justify-content: center
     font-weight: 400
+    transition: 0.3s
+    &:hover
+      color: rgba(255, 255, 255, 1)
+      border: 2px solid rgba(255, 255, 255, 1)
   > p
     font-size: 1.6rem
     padding-left: 2rem
@@ -289,7 +297,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
     color: rgba(255, 255, 255, 0.75)
 
 .contacts
-  z-index: 4
+  z-index: 93
   position: fixed
   bottom: 4rem
   left: 0
@@ -305,10 +313,12 @@ h1, h2, h3, h4, h5, h6, p, span, input
       text-decoration: none
       color: rgba(255,255,255,0.75)
       font-size: 1.6rem
+      text-shadow: 1px 1px 10px 1px #fff
       &:first-child
         padding-right: 5rem
   > p
     font-size: 1.6rem
+
 
 .mainHeadlineWrap
   > div
@@ -433,35 +443,20 @@ h1, h2, h3, h4, h5, h6, p, span, input
     color: #4f4f4f
 
 
-.section-1Light
-  transition: 0.5s
-  h2
-    color: #4f4f4f
-  p
-    color: #828282
-
-.infoCompanyLight
-  > a
-    border: 2px solid #828282
-    color: #828282
-
-.s2-contentBox
-  display: grid
-  grid-auto-rows: 10% 75% 15%
-
 .s2-contentBoxCenter
   padding-top: 2rem
 
 .s2-btnWrapper
+  padding-top: 3.5rem
   display: flex
-  align-items: flex-start
   justify-content: center
+
+
 
 .subsequentSection
   transition: 0.5s
-  padding: 10.3rem
+  padding: 2.5rem 10.3rem
   background-color: #151515
-  height: 100%
 
 .section-3_wrap
   em
@@ -477,7 +472,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 .contentBox
   transition: 0.5s
-  padding: 3.2rem 7.7rem
+  padding: 4rem 7.7rem
   color: #fff
   height: 100%
   background-color: #1d1d1d
@@ -572,10 +567,6 @@ h1, h2, h3, h4, h5, h6, p, span, input
   transition: 0.5s
   background-color: #E5E5E5
 
-.s4-contentBox
-  display: grid
-  grid-auto-rows: 10% auto 15%
-
 .s4-contentBoxLight
   transition: 0.5s
   background-color: #F9FCF2
@@ -591,10 +582,6 @@ h1, h2, h3, h4, h5, h6, p, span, input
   font-weight: bold
   text-transform: uppercase
 
-.s3-contentBox
-  display: grid
-  grid-auto-rows: 8% 77% 15%
-
 .s3-contentCenterBox
   display: grid
   grid-template-columns: 1fr 1fr
@@ -605,8 +592,8 @@ h1, h2, h3, h4, h5, h6, p, span, input
 .s3-rightBox
   background-image: url(img/s3-bgRightBox.png)
   background-repeat: no-repeat
-  background-size: 85% 90%
-  background-position: top
+  background-size: 85% 100%
+  background-position: right
 
 .s3-rightBoxLight
   transition: 0.5s
@@ -621,16 +608,15 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 .s3-btnBox
   display: grid
-  grid-column: 1/3
   justify-content: center
+  padding-top: 3.5rem
   > a
     display: inline-block
-    align-self: start
 
 .s4-btn
   justify-content: center
   display: flex
-  align-items: flex-start
+  padding-top: 3.5rem
 
 .s4-iconBoxWrapper
   display: flex
@@ -681,9 +667,12 @@ h1, h2, h3, h4, h5, h6, p, span, input
   grid-column: 1/3
 
 .footerContactsWrap
-  display: flex
-  flex-direction: column
-  justify-content: space-between
+  grid-gap: 1.5rem
+  display: grid
+  grid-template-columns: 1fr 1fr
+
+.footerContactsWrapper
+  padding-top: 2.5rem
 
 .contactsIcon1
   background-image: url(img/footerIcon1.png)
@@ -703,12 +692,8 @@ h1, h2, h3, h4, h5, h6, p, span, input
     font-size: 1.6rem
     color: #fff
 
-.contentBoxFooter
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-auto-rows: 15% 75%
-
 .footerNetwork
+  padding-top: 14rem
   > a
     color: rgba(255,255,255,0.75)
     text-decoration: none
@@ -769,9 +754,10 @@ h1, h2, h3, h4, h5, h6, p, span, input
   background-color: rgba(222, 255, 179, 0.1)
   display: grid
   grid-template-columns: 6fr 4fr
-  grid-auto-rows: 15% 75%
 
 .s5-content
+  > p
+    padding-top: 2rem
 
 .s5-headline
   grid-column: 1/3
@@ -811,11 +797,6 @@ h1, h2, h3, h4, h5, h6, p, span, input
   > a
     color: #828282
 
-
-.contactsLight
-  > div
-    > a
-      color: #828282
 
 .s5-contentBoxLight
   transition: 0.5s
@@ -918,6 +899,9 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 
 .s7-content
+  display: flex
+  flex-direction: column
+  justify-content: space-between
   > p
     padding: 0
     &:first-child
@@ -925,7 +909,9 @@ h1, h2, h3, h4, h5, h6, p, span, input
       padding-top: 1rem
       font-weight: bold
   > a
-    margin-top: 4.6rem
+    display: inline-block
+    align-self: flex-start
+    margin: 6rem 0 2.5rem 0
     &::after
       transition: all 0.3s
       content: '→'
@@ -937,20 +923,14 @@ h1, h2, h3, h4, h5, h6, p, span, input
     &:hover::after
       right: -27%
 
+.section-2_wrap
+  padding-top: 5rem
+
 .s7-headline, .s7-sliderHeadline
   grid-column: 1/3
   margin-bottom: 2rem
 
-.s7-contentBox
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-
-.s7-headlineWrapper
-
-
 .s7-contentWrap
-  height: 53%
   display: grid
   grid-gap: 1rem
   grid-template-columns: 1fr 1fr
@@ -959,9 +939,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   background-image: url(img/s7-image.png)
   background-repeat: no-repeat
   background-size: contain
-  background-position: top center
-  width: 100%
-  height: 96%
+  background-position: center
 
 .s7WrapLight
   transition: 0.5s
@@ -1016,7 +994,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   background-color: #F9FCF2
   h1
     color: #333333
-  p
+  i
     color: #4f4f4f
 
 .s6-contentBox
@@ -1027,14 +1005,14 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 .swiper-container__wrap-1
   position: relative
-  margin-top: 70px
+  margin-top: 3.5rem
 
 .swiper-container__wrap-2
   position: relative
 
 .swiper-container__wrap-3
   position: relative
-  margin-top: 70px
+  margin-top: 2.5rem
 
 .swiper-container-1
   height: 100%
@@ -1086,6 +1064,90 @@ h1, h2, h3, h4, h5, h6, p, span, input
   &:hover
     color: rgba(255,255,255,1)
     border: 3px solid rgba(255,255,255,1)
+
+.swiper-button-nextLight
+  color: rgba(247, 171, 72, 0.75)
+  border: 3px solid rgba(247, 171, 72, 0.75)
+  font-weight: 900
+  outline: none
+  transition: 0.3s
+  padding: 2.4rem
+  &::after
+    content: '❯'
+    font-size: 4rem
+    color: rgba(247, 171, 72, 0.75)
+  &:hover
+    border: 3px solid rgba(247, 171, 72, 0.75)
+
+.swiper-button-prevLight
+  color: rgba(247, 171, 72, 0.75)
+  border: 3px solid rgba(247, 171, 72, 0.75)
+  font-weight: 900
+  outline: none
+  transition: 0.3s
+  padding: 2.4rem
+  &::after
+    content: '❮'
+    font-size: 4rem
+    color: rgba(247, 171, 72, 0.75)
+  &:hover
+    border: 3px solid rgba(247, 171, 72, 0.75)
+
+.swiper-button-next2
+  color: rgba(247, 171, 72, 0.75)
+  border: 3px solid rgba(247, 171, 72, 0.75)
+  font-weight: 900
+  outline: none
+  transition: 0.3s
+  padding: 2.4rem
+  &::after
+    content: '❯'
+    font-size: 4rem
+    color: rgba(247, 171, 72, 0.75)
+  &:hover
+    border: 3px solid rgba(247, 171, 72, 0.75)
+
+.swiper-button-prev2
+  color: rgba(247, 171, 72, 0.75)
+  border: 3px solid rgba(247, 171, 72, 0.75)
+  font-weight: 900
+  outline: none
+  transition: 0.3s
+  padding: 2.4rem
+  &::after
+    content: '❮'
+    font-size: 4rem
+    color: rgba(247, 171, 72, 0.75)
+  &:hover
+    border: 3px solid rgba(247, 171, 72, 0.75)
+
+.swiper-button-next3
+  color: rgba(247, 171, 72, 0.75)
+  border: 3px solid rgba(247, 171, 72, 0.75)
+  font-weight: 900
+  outline: none
+  transition: 0.3s
+  padding: 2.4rem
+  &::after
+    content: '❯'
+    font-size: 4rem
+    color: rgba(247, 171, 72, 0.75)
+  &:hover
+    border: 3px solid rgba(247, 171, 72, 0.75)
+
+.swiper-button-prev3
+  color: rgba(247, 171, 72, 0.75)
+  border: 3px solid rgba(247, 171, 72, 0.75)
+  font-weight: 900
+  outline: none
+  transition: 0.3s
+  padding: 2.4rem
+  &::after
+    content: '❮'
+    font-size: 4rem
+    color: rgba(247, 171, 72, 0.75)
+  &:hover
+    border: 3px solid rgba(247, 171, 72, 0.75)
 
 .swiper-slide
   text-align: center
@@ -1157,3 +1219,20 @@ h1, h2, h3, h4, h5, h6, p, span, input
 .swiper-container__main
   height: 100%
   width: 100%
+
+.s8-contentBox
+  em
+    color: #000
+
+
+.section-8_wrapLight
+  background-color: #E5E5E5
+  h1
+    color: #333
+  p
+    color: #4f4f4f
+  a
+    color: #4f4f4f
+
+.s8-contentBoxLight
+  background-color: #FCF2F2

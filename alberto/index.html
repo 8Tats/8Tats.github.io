@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>alberto.kz</title>
   <!--bootstrap--><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!--fullpage--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" integrity="sha256-+dIh4jG2jQTHZwW81yUo8h6tzXWcNumyNL5XPZbwp1E=" crossorigin="anonymous" />
+  <!--fullpage <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" integrity="sha256-+dIh4jG2jQTHZwW81yUo8h6tzXWcNumyNL5XPZbwp1E=" crossorigin="anonymous" /> -->
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+
+<input class="dlBtn1" type="button" value="light">
+<input class="dlBtn2" type="button" value="Dark">
 
 <div class="network">
   <a href="#">FACEBOOK</a>
@@ -27,36 +30,10 @@
   <p>ул. Гоголя 144, уг.ул. Муратбаева</p>
 </div>
 
-<header class="headerWrap">
-  <div class="header">
-    <div class="headerLogo"></div>
-    <nav class="headerNav">
-      <a href="#">ГЛАВНАЯ</a>
-      <a href="#">О НАС</a>
-      <a href="#">МЕНЮ</a>
-      <a href="#">УСЛУГИ</a>
-      <a href="#">АКЦИИ</a>
-      <a href="#">НАШИ СОБЫТИЯ</a>
-      <a href="#"><<ДЯДЯ ДОНЕР>></a>
-      <a href="#">КОНТАКТЫ</a>
-    </nav>
-    <div class="shoppingCartWrap">
-      <div class="shoppingCart">
-        <div class="cart"></div>
-        <span>12500 тг</span>
-      </div>
-      <div class="search">
-        <input class="searchInput" id="searchInput" type="text" placeholder="Поиск...">
-        <div class="searchIcon"></div>
-      </div>
-    </div>
-  </div>
-  <input class="dlBtn1" type="button" value="light">
-  <input class="dlBtn2" type="button" value="Dark">
-</header>
+
 
 <div id="fullPage">
-  <div class="section section-1-wrap">
+  <div class="section section-1-wrap" id="mainSection">
     <div class="swiper-container__wrap-main">
       <div class="swiper-container swiper-container__main" id="swiper-container__wrap-main">
         <div class="swiper-wrapper swiper-wrapper-my">
@@ -68,6 +45,31 @@
       </div>
     </div>
       <section class="section-1">
+        <header class="headerWrap">
+          <div class="header">
+            <div class="headerLogo"></div>
+            <nav class="headerNav">
+              <a href="#">ГЛАВНАЯ</a>
+              <a href="#">О НАС</a>
+              <a href="#">МЕНЮ</a>
+              <a href="#">УСЛУГИ</a>
+              <a href="#">АКЦИИ</a>
+              <a href="#">НАШИ СОБЫТИЯ</a>
+              <a href="#"><<ДЯДЯ ДОНЕР>></a>
+              <a href="#">КОНТАКТЫ</a>
+            </nav>
+            <div class="shoppingCartWrap">
+              <div class="shoppingCart">
+                <div class="cart"></div>
+                <span>12500 тг</span>
+              </div>
+              <div class="search">
+                <input class="searchInput" id="searchInput" type="text" placeholder="Поиск...">
+                <div class="searchIcon"></div>
+              </div>
+            </div>
+          </div>
+        </header>
         <div class="mainHeadlineWrap">
           <div class="container">
               <div class="mainHeadline">
@@ -79,7 +81,7 @@
           </div>
         </div>
         <div class="infoCompany">
-          <a href="#">➔</a>
+          <a href="#s2-wrap" id="s2-link">➔</a>
           <p>ПОДРОБНОСТИ<br>О ЗАВЕДЕНИИ</p>
         </div>
       </section>
@@ -87,7 +89,7 @@
   <!--  -->
 
   <div class="section">
-    <section class="subsequentSection section-2_wrap">
+    <section class="subsequentSection section-2_wrap" id="s2-wrap">
       <div class="contentBox s2-contentBox">
         <div class="sHeadline s2-h1">
           <h1 class="h1-after">Караоке-бар «Альберто»<br>– стильное место для отдыха в Алматы</h1>
@@ -124,7 +126,7 @@
           </div>
         </div>
         <div class="s2-btnWrapper">
-          <a href="#" class="animationBtn2">подробнее о баре «альберто»</a>
+          <a href="#mainSection" class="animationBtn2">подробнее о баре «альберто»</a>
         </div>
       </div>
     </section>
@@ -383,8 +385,10 @@
       </div>
       <div class="s7-contentWrap">
         <div class="s7-content">
-          <p class="featuresP featuresP-s7">Проводим постоянные акции и стараемся радовать наших гостей</p><br>
-          <p class="featuresP featuresP-s7">Решите вы взять микрофон или останетесь слушателем – незабываемые впечатления после посещения Альберто вам гарантированы. Приходите и убедитесь в этом сами</p>
+          <div class="s7-contentText">
+            <p class="featuresP featuresP-s7">Проводим постоянные акции и стараемся радовать наших гостей</p><br>
+            <p class="featuresP featuresP-s7">Решите вы взять микрофон или останетесь слушателем – незабываемые впечатления после посещения Альберто вам гарантированы. Приходите и убедитесь в этом сами</p>
+          </div>
           <a href="#" class="animationBtn">хочу бонус</a>
         </div>
         <div class="s7-imageWrap"></div>
@@ -395,7 +399,7 @@
         </div>
 
         <div class="swiper-container__wrap-2" id="swiper-container-2-wrap">
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-prev swiper-button-prev2"></div>
           <div class="swiper-container swiper-container-2" id="swiper-container-2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -419,7 +423,7 @@
 
           </div>
         </div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-next swiper-button-next2"></div>
         </div>
 
       </div>
@@ -435,7 +439,7 @@
         <h1 class="h1-after">наши последние публикации в instagram</h1>
       </div>
       <div class="swiper-container__wrap-3" id="swiper-container-3-wrap">
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-prev swiper-button-prev3"></div>
         <div class="swiper-container swiper-container-3" id="swiper-container-3">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -494,7 +498,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-next swiper-button-next3"></div>
       </div>
     </div>
   </div>
@@ -538,28 +542,22 @@
                  Пт-Сб: 09.00-05.00</p>
             </div>
           </div>
+
+          <div class="footerNetwork">
+            <a href="#">FACEBOOK</a>
+            <a href="#">VKONTAKTE</a>
+            <a href="#">INSTAGRAM</a>
+          </div>
         </div>
-        <div class="footerNetwork">
-          <a href="#">FACEBOOK</a>
-          <a href="#">VKONTAKTE</a>
-          <a href="#">INSTAGRAM</a>
+        <div class="footerMap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23232.231224189694!2d76.92737496561976!3d43.29271639980939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1577030238477!5m2!1sru!2skz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
-      </div>
-      <div class="footerMap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23232.231224189694!2d76.92737496561976!3d43.29271639980939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1577030238477!5m2!1sru!2skz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </div>
   </footer>
 </div>
 <!--  -->
 
-<div class="section">
-  <div class="subsequentSection">
-    <div class="contentBox">
-
-    </div>
-  </div>
-</div>
 </div> <!--fullPage-->
 
 
@@ -569,7 +567,7 @@
 
 <!---------------------------------------------------------->
 
-<!--fullpage--><script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js" integrity="sha256-caNcSA0LvOCX90PTuEbwl+V09xPMca13CJUasl+VCtk=" crossorigin="anonymous"></script>
+<!--fullpage <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js" integrity="sha256-caNcSA0LvOCX90PTuEbwl+V09xPMca13CJUasl+VCtk=" crossorigin="anonymous"></script>-->
 <!--wow--><script src="js/wow.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script defer src="js/main.js"></script>
@@ -639,9 +637,10 @@ var swiper = new Swiper('#swiper-container-3.swiper-container', {
     },
     loop: true,
   });
+  // swiper__JS
 </script>
 
-<script>
+<!-- <script>
   new fullpage('#fullPage', {
     autoScrolling: true,
     navigation: true,
@@ -649,7 +648,7 @@ var swiper = new Swiper('#swiper-container-3.swiper-container', {
     showActiveTooltip: true
   })
   // fullpaje__JS
-</script>
+</script> -->
 
 <script>  new WOW().init();  </script>
 <!---------------------------------------------------------->

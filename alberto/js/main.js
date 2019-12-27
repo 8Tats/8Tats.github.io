@@ -9,25 +9,37 @@ _searchIcon.onclick = function() {
   _shoppingCart.classList.toggle('shoppingCartActive');
 };
 ////////
+
+const mainSectionAnchor = document.querySelectorAll('a[href*="#"]')
+for(let anchor of mainSectionAnchor) {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    const blockID = anchor.getAttribute('href')
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+};
+
+
+////////
 let btnLight = document.querySelector('.dlBtn1'),
     btnDark = document.querySelector('.dlBtn2'),
     headerLogo = document.querySelector('.headerLogo'),
-    networkLight = document.querySelector('.network'),
-    contactsLight = document.querySelector('.contacts'),
-    searchLight = document.querySelector('.search'),
-    cartLight = document.querySelector('.cart'),
-    mainSecion = document.querySelector('.section-1'),
-    headerLight = document.querySelector('.header'),
+    swiperButtonNext = document.querySelector('.swiper-button-next'),
+    swiperButtonPrev = document.querySelector('.swiper-button-prev'),
     slide1Light = document.querySelector('.slide-1'),
-    infoCompanyLight = document.querySelector('.infoCompany'),
     animationBtnLight = document.querySelector('.animationBtn'),
     animationBtnLight2 = document.querySelector('.animationBtn2'),
     animationBtnLight3 = document.querySelector('.animationBtn3'),
     animationBtnLight4 = document.querySelector('.animationBtn4'),
     subsequentSectionLight = document.querySelector('.subsequentSection'),
     contentBoxLight = document.querySelector('.contentBox'),
+    section8WrapLight = document.querySelector('.section-8_wrap'),
     section3WrapLight = document.querySelector('.section-3_wrap'),
     section7WrapLight = document.querySelector('.s7Wrap'),
+    s8ContentBoxLight = document.querySelector('.s8-contentBox'),
     section6WrapLight = document.querySelector('.s6Wrap'),
     s3ContentBox = document.querySelector('.s3-contentBox'),
     s3RightBoxLight = document.querySelector('.s3-rightBox'),
@@ -48,19 +60,16 @@ btnLight.onclick = function() {
   btnDark.style.display = "block";
   btnLight.style.display = "none";
   headerLogo.classList.add('headerLogoLight');
-  networkLight.classList.add('networkLight');
   slide1Light.classList.add('slide-1Light');
-  contactsLight.classList.add('contactsLight');
-  searchLight.classList.add('searchLight');
+  s8ContentBoxLight.classList.add('s8-contentBoxLight');
+  swiperButtonNext.classList.add('swiper-button-nextLight');
+  swiperButtonPrev.classList.add('swiper-button-prevLight');
   contentBoxFooterLight.classList.add('contentBoxFooterLight');
-  cartLight.classList.add('cartLight');
   contactsIcon1Light.classList.add('contactsIcon1Light');
   contactsIcon2Light.classList.add('contactsIcon2Light');
   contactsIcon3Light.classList.add('contactsIcon3Light');
+  section8WrapLight.classList.add('section-8_wrapLight');
   contactsIcon4Light.classList.add('contactsIcon4Light');
-  mainSecion.classList.add('section-1Light');
-  headerLight.classList.add('headerLight');
-  infoCompanyLight.classList.add('infoCompanyLight');
   animationBtnLight.classList.add('animationBtnLight');
   animationBtnLight2.classList.add('animationBtn2Light');
   animationBtnLight3.classList.add('animationBtn3Light');
@@ -85,23 +94,20 @@ btnDark.onclick = function() {
   btnLight.style.display = "block"
   btnDark.style.display = "none"
   headerLogo.classList.remove('headerLogoLight');
-  networkLight.classList.remove('networkLight');
-  contactsLight.classList.remove('contactsLight');
-  searchLight.classList.remove('searchLight');
+  s8ContentBoxLight.classList.remove('s8-contentBoxLight');
+  swiperButtonNext.classList.remove('swiper-button-nextLight');
+  swiperButtonPrev.classList.remove('swiper-button-prevLight');
+  section8WrapLight.classList.remove('section-8_wrapLight');
   section5Wrap.classList.remove('section-5_wrapLight');
   contentBoxFooterLight.classList.remove('contentBoxFooterLight');
-  cartLight.classList.remove('cartLight');
   contactsIcon1Light.classList.remove('contactsIcon1Light');
   contactsIcon2Light.classList.remove('contactsIcon2Light');
   contactsIcon3Light.classList.remove('contactsIcon3Light');
   contactsIcon4Light.classList.remove('contactsIcon4Light');
-  mainSecion.classList.remove('section-1Light');
-  headerLight.classList.remove('headerLight');
   section7WrapLight.classList.remove('s7WrapLight');
   section6WrapLight.classList.remove('s6WrapLight');
   s7ContentBox.classList.remove('s7-contentBoxLight');
   s6ContentBox.classList.remove('s6-contentBoxLight');
-  infoCompanyLight.classList.remove('infoCompanyLight');
   animationBtnLight.classList.remove('animationBtnLight');
   animationBtnLight2.classList.remove('animationBtn2Light');
   animationBtnLight3.classList.remove('animationBtn3Light');
