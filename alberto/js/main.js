@@ -8,7 +8,20 @@ _searchIcon.onclick = function() {
   _search.classList.toggle('searchInputActive');
   _shoppingCart.classList.toggle('shoppingCartActive');
 };
-////////
+
+let _headerNavBtn = document.querySelector('.headerNavBtn'),
+    _headerNavWindow = document.querySelector('.headerNavWindow'),
+    _infoCompany = document.querySelector('.infoCompany'),
+    _mainHeadlineWrap = document.querySelector('.mainHeadlineWrap');
+
+_headerNavBtn.onclick = function() {
+  _headerNavBtn.classList.toggle('headerNavBtnActive');
+  _headerNavWindow.classList.toggle('headerNavWindowActive');
+  _mainHeadlineWrap.classList.toggle('mainHeadlineWrapActive');
+  _infoCompany.classList.toggle('infoCompanyActive');
+};
+
+
 
 const mainSectionAnchor = document.querySelectorAll('a[href*="#"]')
 for(let anchor of mainSectionAnchor) {
@@ -18,8 +31,8 @@ for(let anchor of mainSectionAnchor) {
     document.querySelector('' + blockID).scrollIntoView({
       behavior: "smooth",
       block: "start"
-    })
-  })
+    });
+  });
 };
 
 
@@ -30,10 +43,13 @@ let btnLight = document.querySelector('.dlBtn1'),
     swiperButtonNext = document.querySelector('.swiper-button-next'),
     swiperButtonPrev = document.querySelector('.swiper-button-prev'),
     slide1Light = document.querySelector('.slide-1'),
+    networkLight = document.querySelector('.network'),
+    contactsLight = document.querySelector('.contacts'),
     animationBtnLight = document.querySelector('.animationBtn'),
     animationBtnLight2 = document.querySelector('.animationBtn2'),
     animationBtnLight3 = document.querySelector('.animationBtn3'),
     animationBtnLight4 = document.querySelector('.animationBtn4'),
+    animationBtnLight5 = document.querySelector('.animationBtn5'),
     subsequentSectionLight = document.querySelector('.subsequentSection'),
     contentBoxLight = document.querySelector('.contentBox'),
     section8WrapLight = document.querySelector('.section-8_wrap'),
@@ -63,6 +79,8 @@ btnLight.onclick = function() {
   slide1Light.classList.add('slide-1Light');
   s8ContentBoxLight.classList.add('s8-contentBoxLight');
   swiperButtonNext.classList.add('swiper-button-nextLight');
+  networkLight.classList.add('networkLight');
+  contactsLight.classList.add('contactsLight');
   swiperButtonPrev.classList.add('swiper-button-prevLight');
   contentBoxFooterLight.classList.add('contentBoxFooterLight');
   contactsIcon1Light.classList.add('contactsIcon1Light');
@@ -74,6 +92,7 @@ btnLight.onclick = function() {
   animationBtnLight2.classList.add('animationBtn2Light');
   animationBtnLight3.classList.add('animationBtn3Light');
   animationBtnLight4.classList.add('animationBtn4Light');
+  animationBtnLight5.classList.add('animationBtn5Light');
   subsequentSectionLight.classList.add('subsequentSectionLight');
   contentBoxLight.classList.add('contentBoxLight');
   section3WrapLight.classList.add('section-3_wrapLight');
@@ -101,6 +120,8 @@ btnDark.onclick = function() {
   section5Wrap.classList.remove('section-5_wrapLight');
   contentBoxFooterLight.classList.remove('contentBoxFooterLight');
   contactsIcon1Light.classList.remove('contactsIcon1Light');
+  networkLight.classList.remove('networkLight');
+  contactsLight.classList.remove('contactsLight');
   contactsIcon2Light.classList.remove('contactsIcon2Light');
   contactsIcon3Light.classList.remove('contactsIcon3Light');
   contactsIcon4Light.classList.remove('contactsIcon4Light');
@@ -112,6 +133,7 @@ btnDark.onclick = function() {
   animationBtnLight2.classList.remove('animationBtn2Light');
   animationBtnLight3.classList.remove('animationBtn3Light');
   animationBtnLight4.classList.remove('animationBtn4Light');
+  animationBtnLight5.classList.remove('animationBtn5Light');
   subsequentSectionLight.classList.remove('subsequentSectionLight');
   contentBoxLight.classList.remove('contentBoxLight');
   section3WrapLight.classList.remove('section-3_wrapLight');

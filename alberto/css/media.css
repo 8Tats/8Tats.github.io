@@ -1,9 +1,18 @@
+@media(max-width: 1500px) {
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+}
+
 @media(max-width: 1400px) {
   html {
-    font-size: 8px;
+    font-size: 9px;
   }
   .mainHeadline {
-    padding-left: 13rem;
+    padding-left: 7rem;
   }
   .s2-btnWrapper, .s4-btn {
     align-items: flex-end;
@@ -14,7 +23,7 @@
   .conuterDivWrapper {
     grid-gap: 10rem
   }
-  #fp-nav ul::after, .fp-slidesNav ul {
+  /* #fp-nav ul::after, .fp-slidesNav ul {
     content: '›';
     color: #fff;
     position: absolute;
@@ -31,5 +40,115 @@
     transform: rotate(90deg);
     font-size: 6.6rem;
     left: 1.5rem;
+  }*/
+}
+
+@media(max-width: 1200px) {
+  .footerContactsWrap {
+    grid-template-columns: 1fr;
+  }
+  .section-1-wrap {
+    height: 650px ;
+  }
+  .footerNetwork {
+    padding: 1rem 0;
+  }
+  .subsequentSection {
+    padding: 2rem 0;
+  }
+  .network, .contacts {
+    display: none;
+  }
+}
+
+@media(max-width: 1100px) {
+  .headerNav {
+    display: none;
+  }
+  html {
+    font-size: 8.3px;
+  }
+  .headerNavBtn {
+    display: flex
+  }
+  .header {
+    justify-content: space-between;
+    padding: 0 1rem
+  }
+  .mainHeadlineWrap > div {
+    justify-content: center;
+  }
+  .mainHeadline {
+    padding-left: 0;
+  }
+}
+
+@media(max-width: 1000px) {
+  .s3-contentCenterBox, .s7-contentWrap {
+    grid-template-columns: 1fr;
+  }
+  .s3-rightBox {
+    display: none;
+  }
+}
+
+@media(max-width: 900px) {
+  .featuresWrapper {
+    grid-template-columns: 1fr;
+  }
+  .s4-iconBoxWrapper {
+    grid-column: 1/3;
+  }
+  .conuterDivWrapper {
+    grid-template-columns: 1fr;
+    width: 80%
+  }
+}
+
+@media(max-width: 750px) {
+  .contentBox {
+    padding: 2rem 3rem
+  }
+}
+
+@media(max-width: 700px) {
+  .conuterDivWrapper {
+    width: 100%
+  }
+  .swiper-button-prev {
+    left: -2rem;
+    border: none
+  }
+  .swiper-button-next {
+    right: -2rem;
+    border: none
+  }
+  .swiper-button-prev:hover {
+    left: -2rem;
+    border: none
+  }
+  .swiper-button-next:hover {
+    right: -2rem;
+    border: none
+  }
+  .swiper-image {
+    width: 95%;
+  }
+}
+
+@media(max-width: 460px) {
+  .mainHeadline > h2 {
+    font-size: 2.1rem;
+  }
+  .swiper-image2 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .swiper-image2 > img {
+    margin-bottom: 1rem;
+  }
+  .mainHeadline > h1 {
+    font-size: 7rem;
+    letter-spacing: 1.5rem
   }
 }
