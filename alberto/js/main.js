@@ -1,5 +1,6 @@
 'use strict';
 
+
 let _searchIcon = document.querySelector('.searchIcon'),
     _search = document.getElementById('searchInput'),
     _shoppingCart = document.querySelector('.shoppingCart');
@@ -44,6 +45,7 @@ let btnLight = document.querySelector('.dlBtn1'),
     swiperButtonPrev = document.querySelector('.swiper-button-prev'),
     slide1Light = document.querySelector('.slide-1'),
     networkLight = document.querySelector('.network'),
+    _headhesive = document.querySelector('.headhesive'),
     contactsLight = document.querySelector('.contacts'),
     animationBtnLight = document.querySelector('.animationBtn'),
     animationBtnLight2 = document.querySelector('.animationBtn2'),
@@ -70,7 +72,14 @@ let btnLight = document.querySelector('.dlBtn1'),
     s7ContentBox = document.querySelector('.s7-contentBox'),
     s6ContentBox = document.querySelector('.s6-contentBox'),
     s5ContentBox = document.querySelector('.s5-contentBox'),
+    headerNavWindowLink_insideWrap = document.querySelector('.headerNavWindowLink_insideWrap'),
+    headerNavWindowLink2 = document.querySelector('.headerNavWindowLink2'),
+    _headerNavWindowLink1 = document.getElementById('headerNavWindowLink1'),
     section5Wrap = document.querySelector('.section-5_wrap');
+
+headerNavWindowLink2.onclick = function() {
+  headerNavWindowLink_insideWrap.classList.toggle('headerNavWindowLink_insideActive');
+}
 
 btnLight.onclick = function() {
   btnDark.style.display = "block";

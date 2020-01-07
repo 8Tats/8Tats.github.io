@@ -14,14 +14,52 @@
 <body>
 
 <div class="headerNavWindow">
-  <a href="#">Главная</a>
-  <a href="#">О нас <span>›</span></a>
-  <a href="#">Меню <span>›</span></a>
-  <a href="#">Услуги <span>›</span></a>
-  <a href="#">Акции</a>
-  <a href="#">Наши события</a>
-  <a href="#"><span style="padding-left: 0">«</span>дядя донер<span style="padding-left: 0">»</span></a>
-  <a href="#">Контакты</a>
+  <div class="headerNavWindowBox">
+    <div class="headerNavWindowLink headerNavWindowLink1">
+      <a href="#">Главная</a>
+    </div>
+    <div class="headerNavWindowLink headerNavWindowLink2">
+      <a href="#">О нас</a>
+      <span id="headerNavWindowLink1"></span>
+    </div>
+    <div class="headerNavWindowLink_insideWrap">
+      <div class="headerNavWindowLink_inside">
+        <a href="#">Залы и кабинки</a>
+      </div>
+      <div class="headerNavWindowLink_inside">
+        <a href="#">Галерея</a>
+      </div>
+      <div class="headerNavWindowLink_inside">
+        <a href="#">Вакансии</a>
+      </div>
+      <div class="headerNavWindowLink_inside">
+        <a href="#">Отзывы</a>
+      </div>
+      <div class="headerNavWindowLink_inside">
+        <a href="#">3D-тур</a>
+      </div>
+    </div>
+    <div class="headerNavWindowLink">
+      <a href="#">Меню</a>
+      <span></span>
+    </div>
+    <div class="headerNavWindowLink">
+      <a href="#">Услуги</a>
+      <span></span>
+    </div>
+    <div class="headerNavWindowLink">
+      <a href="#">Акции</a>
+    </div>
+    <div class="headerNavWindowLink">
+      <a href="#">Наши события</a>
+    </div>
+    <div class="headerNavWindowLink">
+      <a href="#"><span style="padding-left: 0">«</span>Дядя Донер<span style="padding-left: 0">»</span></a>
+    </div>
+    <div class="headerNavWindowLink">
+      <a href="#">Контакты</a>
+    </div>
+  </div>
 </div>
 
 <input class="dlBtn1" type="button" value="light">
@@ -582,9 +620,15 @@
 <!---------------------------------------------------------->
 
 <!--fullpage <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js" integrity="sha256-caNcSA0LvOCX90PTuEbwl+V09xPMca13CJUasl+VCtk=" crossorigin="anonymous"></script>-->
+<script src="js/headhesive.min.js"></script>
 <!--wow--><script src="js/wow.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script defer src="js/main.js"></script>
+
+<script>
+  var optinons = { offset: 400 }
+  var header = new Headhesive('.headerWrap', optinons);
+</script>
 
 <script>
 var swiper = new Swiper('#swiper-container-1.swiper-container', {
