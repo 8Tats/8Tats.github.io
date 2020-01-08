@@ -1,6 +1,5 @@
 'use strict';
 
-
 let _searchIcon = document.querySelector('.searchIcon'),
     _search = document.getElementById('searchInput'),
     _shoppingCart = document.querySelector('.shoppingCart');
@@ -21,8 +20,6 @@ _headerNavBtn.onclick = function() {
   _mainHeadlineWrap.classList.toggle('mainHeadlineWrapActive');
   _infoCompany.classList.toggle('infoCompanyActive');
 };
-
-
 
 const mainSectionAnchor = document.querySelectorAll('a[href*="#"]')
 for(let anchor of mainSectionAnchor) {
@@ -45,6 +42,7 @@ let btnLight = document.querySelector('.dlBtn1'),
     swiperButtonPrev = document.querySelector('.swiper-button-prev'),
     slide1Light = document.querySelector('.slide-1'),
     networkLight = document.querySelector('.network'),
+    arrowNext = document.querySelector('.arrowNext'),
     _headhesive = document.querySelector('.headhesive'),
     contactsLight = document.querySelector('.contacts'),
     animationBtnLight = document.querySelector('.animationBtn'),
@@ -73,12 +71,23 @@ let btnLight = document.querySelector('.dlBtn1'),
     s6ContentBox = document.querySelector('.s6-contentBox'),
     s5ContentBox = document.querySelector('.s5-contentBox'),
     headerNavWindowLink_insideWrap = document.querySelector('.headerNavWindowLink_insideWrap'),
+    headerNavWindowLink_doubleInsideWrap = document.querySelector('.headerNavWindowLink_doubleInsideWrap'),
+    // headerLight = document.querySelector('.header'),
     headerNavWindowLink2 = document.querySelector('.headerNavWindowLink2'),
-    _headerNavWindowLink1 = document.getElementById('headerNavWindowLink1'),
+    headerNavWindowLink3 = document.querySelector('.headerNavWindowLink3'),
+    _headerNavWindowLink = document.querySelector('.headerNavWindowLink'),
+    _headerNavWindowLink1 = document.querySelector('.headerNavWindowLink1'),
+    headerNavWindowLink1_inside = document.querySelector('.headerNavWindowLink1_inside'),
     section5Wrap = document.querySelector('.section-5_wrap');
 
 headerNavWindowLink2.onclick = function() {
   headerNavWindowLink_insideWrap.classList.toggle('headerNavWindowLink_insideActive');
+  _headerNavWindowLink1.classList.toggle('headerNavWindowLink1Active')
+}
+
+headerNavWindowLink3.onclick = function() {
+  headerNavWindowLink1_inside.classList.toggle('headerNavWindowLink1_insideActive')
+  headerNavWindowLink_doubleInsideWrap.classList.toggle('headerNavWindowLink_doubleInsideActive');
 }
 
 btnLight.onclick = function() {
@@ -86,8 +95,10 @@ btnLight.onclick = function() {
   btnLight.style.display = "none";
   headerLogo.classList.add('headerLogoLight');
   slide1Light.classList.add('slide-1Light');
+  // headerLight.classList.add('headerLight');
   s8ContentBoxLight.classList.add('s8-contentBoxLight');
   swiperButtonNext.classList.add('swiper-button-nextLight');
+  arrowNext.classList.add('arrowNextLight');
   networkLight.classList.add('networkLight');
   contactsLight.classList.add('contactsLight');
   swiperButtonPrev.classList.add('swiper-button-prevLight');
@@ -126,7 +137,9 @@ btnDark.onclick = function() {
   swiperButtonNext.classList.remove('swiper-button-nextLight');
   swiperButtonPrev.classList.remove('swiper-button-prevLight');
   section8WrapLight.classList.remove('section-8_wrapLight');
+  // headerLight.classList.remove('headerLight');
   section5Wrap.classList.remove('section-5_wrapLight');
+  slide1Light.classList.remove('slide-1Light');
   contentBoxFooterLight.classList.remove('contentBoxFooterLight');
   contactsIcon1Light.classList.remove('contactsIcon1Light');
   networkLight.classList.remove('networkLight');
