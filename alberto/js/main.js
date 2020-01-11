@@ -42,7 +42,13 @@ let btnLight = document.querySelector('.dlBtn1'),
     swiperButtonPrev = document.querySelector('.swiper-button-prev'),
     slide1Light = document.querySelector('.slide-1'),
     networkLight = document.querySelector('.network'),
-    arrowNext = document.querySelector('.arrowNext'),
+    s2Arrow = document.querySelector('.s2-arrow'),
+    s3Arrow = document.querySelector('.s3-arrow'),
+    s4Arrow = document.querySelector('.s4-arrow'),
+    s5Arrow = document.querySelector('.s5-arrow'),
+    s6Arrow = document.querySelector('.s6-arrow'),
+    s7Arrow = document.querySelector('.s7-arrow'),
+    s8Arrow = document.querySelector('.s8-arrow'),
     _headhesive = document.querySelector('.headhesive'),
     contactsLight = document.querySelector('.contacts'),
     animationBtnLight = document.querySelector('.animationBtn'),
@@ -98,7 +104,13 @@ btnLight.onclick = function() {
   // headerLight.classList.add('headerLight');
   s8ContentBoxLight.classList.add('s8-contentBoxLight');
   swiperButtonNext.classList.add('swiper-button-nextLight');
-  arrowNext.classList.add('arrowNextLight');
+  s2Arrow.classList.add('s2-arrowLight');
+  s3Arrow.classList.add('s3-arrowLight');
+  s4Arrow.classList.add('s4-arrowLight');
+  s5Arrow.classList.add('s5-arrowLight');
+  s6Arrow.classList.add('s6-arrowLight');
+  s7Arrow.classList.add('s7-arrowLight');
+  s8Arrow.classList.add('s8-arrowLight');
   networkLight.classList.add('networkLight');
   contactsLight.classList.add('contactsLight');
   swiperButtonPrev.classList.add('swiper-button-prevLight');
@@ -140,6 +152,13 @@ btnDark.onclick = function() {
   // headerLight.classList.remove('headerLight');
   section5Wrap.classList.remove('section-5_wrapLight');
   slide1Light.classList.remove('slide-1Light');
+  s2Arrow.classList.remove('s2-arrowLight');
+  s3Arrow.classList.remove('s3-arrowLight');
+  s4Arrow.classList.remove('s4-arrowLight');
+  s5Arrow.classList.remove('s5-arrowLight');
+  s6Arrow.classList.remove('s6-arrowLight');
+  s7Arrow.classList.remove('s7-arrowLight');
+  s8Arrow.classList.remove('s8-arrowLight');
   contentBoxFooterLight.classList.remove('contentBoxFooterLight');
   contactsIcon1Light.classList.remove('contactsIcon1Light');
   networkLight.classList.remove('networkLight');
