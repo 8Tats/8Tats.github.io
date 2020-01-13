@@ -217,15 +217,16 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  bottom: 10%;
+  bottom: 5%;
   right: 8%; }
   .linkUp:hover {
     color: #fff;
     text-decoration: none;
-    -webkit-transform: rotate(-450deg);
-    -ms-transform: rotate(-450deg);
-    transform: rotate(-450deg);
-    border: 2px solid #fff; }
+    -webkit-transform: translateY(-5px) rotate(-90deg);
+    -ms-transform: translateY(-5px) rotate(-90deg);
+    transform: translateY(-5px) rotate(-90deg);
+    -webkit-box-shadow: 0 0 5px 1px #fff;
+    box-shadow: 0 0 5px 1px #fff; }
   .linkUp::before {
     content: '➙';
     position: absolute;
@@ -269,6 +270,7 @@ h1, h2, h3, h4, h5, h6, p, span, input {
 
 .headerNavBtn {
   width: 7rem;
+  display: none;
   padding: 0 2rem 0 1rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -713,9 +715,9 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   .animationBtn5:hover::after,
   .animationBtn5:active::after,
   .animationBtn5:visited::after {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
     content: '→';
     color: rgba(247, 171, 72, 0.75);
     position: absolute;
@@ -798,9 +800,9 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   color: rgba(247, 171, 72, 0.75);
   text-decoration: none;
   position: relative;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s; }
   .animationBtnLight::after,
   .animationBtnLight:active::after,
   .animationBtnLight:visited::after,
@@ -2050,11 +2052,11 @@ h1, h2, h3, h4, h5, h6, p, span, input {
   color: #fff;
   font-size: 20px; }
 
-.animateBtn1Active,
-.animateBtn2Active,
-.animateBtn3Active,
-.animateBtn4Active,
-.animateBtn5Active {
-  -webkit-transform: translate(7%);
-  -ms-transform: translate(7%);
-  transform: translate(7%); }
+.animateBtn1Active::after,
+.animateBtn2Active::after,
+.animateBtn3Active::after,
+.animateBtn4Active::after,
+.animateBtn5Active::after {
+  -webkit-transform: translate(30%);
+  -ms-transform: translate(30%);
+  transform: translate(30%); }

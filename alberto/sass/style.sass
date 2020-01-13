@@ -185,13 +185,13 @@ h1, h2, h3, h4, h5, h6, p, span, input
   transform: rotate(-90deg)
   border-radius: 50%
   transition: 0.4s
-  bottom: 10%
+  bottom: 5%
   right: 8%
   &:hover
     color: #fff
     text-decoration: none
-    transform: rotate(-450deg)
-    border: 2px solid #fff
+    transform: translateY(-5px) rotate(-90deg)
+    box-shadow: 0 0 5px 1px #fff
   &::before
     content: '➙'
     position: absolute
@@ -227,6 +227,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 .headerNavBtn
   width: 7rem
+  display: none
   padding: 0 2rem 0 1rem
   align-items: center
   justify-content: center
@@ -536,7 +537,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   position: relative
   transition: all 0.7s
   &::after
-    transition: all 0.3s
+    transition: all 0.7s
     content: '→'
     color: rgba(247, 171, 72, 0.75)
     position: absolute
@@ -581,7 +582,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   color: rgba(247, 171, 72, 0.75)
   text-decoration: none
   position: relative
-  transition: all 0.5s
+  transition: all 0.7s
   &::after
     transition: all 0.5s
     content: '→'
@@ -1575,4 +1576,5 @@ h1, h2, h3, h4, h5, h6, p, span, input
 .animateBtn3Active,
 .animateBtn4Active,
 .animateBtn5Active
-  transform: translate(7%)
+  &::after
+      transform: translate(30%)
