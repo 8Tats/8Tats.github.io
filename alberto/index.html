@@ -16,66 +16,48 @@
 
 <div class="headerNavWindow">
   <div class="headerNavWindowBox">
-    <div class="headerNavWindowLink">
+    <div class="windowLinkWrap">
       <a href="#">Главная</a>
     </div>
-    <div class="headerNavWindowLink headerNavWindowLink2">
+    <div class="windowLinkWrap">
       <a href="#">О нас</a>
-      <span id="headerNavWindowLink1" class="headerNavWindowLink1"></span>
+      <span></span>
     </div>
-    <div class="headerNavWindowLink_insideWrap">
-      <div class="headerNavWindowLink_inside">
-        <a href="#">Залы и кабинки</a>
-      </div>
-      <div class="headerNavWindowLink_inside headerNavWindowLink3">
-        <a href="#">Галерея</a>
-        <span id="headerNavWindowLink1_inside" class=" headerNavWindowLink1_inside"></span>
-      </div>
-      <div class="headerNavWindowLink_doubleInsideWrap">
-        <div class="headerNavWindowLink_doubleInside">
-          <a href="#">Фото</a>
-        </div>
-        <div class="headerNavWindowLink_doubleInside">
-          <a href="#">Видео</a>
-        </div>
-      </div>
-      <div class="headerNavWindowLink_inside">
-        <a href="#">Вакансии</a>
-      </div>
-      <div class="headerNavWindowLink_inside">
-        <a href="#">Отзывы</a>
-      </div>
-      <div class="headerNavWindowLink_inside">
-        <a href="#">3D-тур</a>
-      </div>
-    </div>
-    <div class="headerNavWindowLink">
+    <div class="windowLinkWrap">
       <a href="#">Меню</a>
-      <span id="headerNavWindowLink1" class="headerNavWindowLink1"></span>
+      <span></span>
     </div>
-    <div class="headerNavWindowLink_doubleInsideWrap2">
-      <div class="headerNavWindowLink_doubleInside2">
-        <a href="">Напитки</a>
+    <div class="windowLinkWrap windowLinkWrapServices">
+      <a href="http://google.com">Услуги</a>
+      <span></span>
+    </div>
+    <div class="windowLinkWrapper1">
+      <div class="windowLink">
+        <a href="#">Доставка еды</a>
+      </div>
+      <div class="windowLink">
+        <a href="#">Кальян</a>
+      </div>
+      <div class="windowLink">
+        <a href="#">Трансляция футбольных матчей</a>
       </div>
     </div>
-    <div class="headerNavWindowLink">
-      <a href="#">Услуги</a>
-      <span id="headerNavWindowLink1" class="headerNavWindowLink1"></span>
-    </div>
-    <div class="headerNavWindowLink">
+    <div class="windowLinkWrap">
       <a href="#">Акции</a>
     </div>
-    <div class="headerNavWindowLink">
+    <div class="windowLinkWrap">
       <a href="#">Наши события</a>
     </div>
-    <div class="headerNavWindowLink">
-      <a href="#"><span style="padding-left: 0">«</span>Дядя Донер<span style="padding-left: 0">»</span></a>
+    <div class="windowLinkWrap">
+      <a href="#">Дядя Донер</a>
     </div>
-    <div class="headerNavWindowLink">
+    <div class="windowLinkWrap">
       <a href="#">Контакты</a>
     </div>
   </div>
 </div>
+
+<a href="#" class="linkUp" id="buttonUp"></a>
 
 <input class="dlBtn1" type="button" value="light">
 <input class="dlBtn2" type="button" value="Dark">
@@ -91,7 +73,6 @@
     <a href="tel:+77273856255"><strong>+7 (727)</strong> 385-62-55</a>
     <a href="#footerAnchor">ул. Гоголя 144, уг.ул. Муратбаева</a>
 </div>
-
 
 
 <div id="fullPage">
@@ -117,14 +98,84 @@
             <div class="headerLogo"></div>
           </div>
           <nav class="headerNav">
-            <a href="#">ГЛАВНАЯ</a>
-            <a href="#">О НАС</a>
-            <a href="#">МЕНЮ</a>
-            <a href="#">УСЛУГИ</a>
-            <a href="#">АКЦИИ</a>
-            <a href="#">НАШИ СОБЫТИЯ</a>
-            <a href="#"><<ДЯДЯ ДОНЕР>></a>
-            <a href="#">КОНТАКТЫ</a>
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">О нас</a>
+                <ul class="ul1">
+                   <li>
+                     <a href="#">Залы и кабинки</a>
+                   </li>
+                   <li>
+                     <a href="#">Галерея</a>
+                     <ul>
+                       <li><a href="#">Фото</a></li>
+                       <li><a href="#">Видео</a></li>
+                     </ul>
+                   </li>
+                   <li><a href="#">Вакансии</a></li>
+                   <li><a href="#">Отзывы</a></li>
+                   <li>
+                     <a href="#">3D-тур</a>
+                     <ul style="min-width: 380px; right: -380px">
+                       <li><a href="#">Общий тур</a></li>
+                       <li><a href="#">Караоке-бар "Alberto"</a></li>
+                       <li><a href="#">Кабинки караоке</a></li>
+                       <li><a href="#">Ресторан турецкой кухни "Дядя Донер"</a></li>
+                     </ul>
+                   </li>
+                 </ul>
+              </li>
+              <li>
+                <a href="#">Меню</a>
+                <ul style="min-width: 380px;">
+                  <li>
+                    <a href="#">Напитки</a>
+                    <ul style="right: -304px">
+                      <li><a href="#">Закуски к пиву</a></li>
+                      <li><a href="#">Горячие напитки</a></li>
+                      <li><a href="#">Кофейные напитки</a></li>
+                      <li><a href="#">Прохладительные напитки и фреш</a></li>
+                      <li><a href="#">Энергетические напитки</a></li>
+                      <li><a href="#">Коктейли</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Закуски, салаты</a></li>
+                  <li><a href="#">Первые блюда</a></li>
+                  <li><a href="#">Горячие блюда</a></li>
+                  <li><a href="#">Пицца, фастфуд</a></li>
+                  <li><a href="#">Десерты</a></li>
+                  <li><a href="#">Шашлык</a></li>
+                  <li><a href="#">Завтраки</a></li>
+                  <li><a href="#">Гарниры</a></li>
+                  <li><a href="#">Комплексные обеды</a></li>
+                  <li><a href="#">Детское меню</a></li>
+                  <li>
+                    <a href="#">Меню ресторана турецкой кухни "Дядя Донер"</a>
+                    <ul>
+                      <li><a href="#">Донер</a></li>
+                      <li><a href="#">Выпечка</a></li>
+                      <li><a href="#">Десерт</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Услуги</a>
+                <ul style="min-width: 330px;">
+                  <li><a href="#">Доставка еды</a></li>
+                  <li><a href="#">Кальян</a></li>
+                  <li><a href="#">Трансляция футбольных матчей</a></li>
+                  <li><a href="#">Игровой клуб PlayStation</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Наши события</a></li>
+              <li><a href="#">Дядя Донер</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
           </nav>
           <div class="shoppingCartWrap">
             <div class="shoppingCart">
@@ -144,7 +195,7 @@
               <h2 data-aos="fade-in" data-aos-delay="300">КАРАОКЕ-БАР</h2>
               <h1 data-aos="fade-in" data-aos-delay="300">ALBERTO</h1>
               <p data-aos="fade-in" data-aos-delay="300">Примерьте на себя образ поп-дивы или рок-звезды в<br>любой день, когда душа просит праздника</p>
-              <div data-aos="fade-right" data-aos-delay="300"><a class="animationBtn" href="#">забронировать столик</a></div>
+              <div data-aos="fade-right" data-aos-delay="300"><a class="animationBtn" href="#" id="animateBtn1">забронировать столик</a></div>
             </div>
         </div>
       </div>
@@ -194,7 +245,7 @@
           </div>
         </div>
         <div class="s2-btnWrapper" data-aos="fade-right">
-          <a href="#mainSection" class="animationBtn2">подробнее о баре «альберто»</a>
+          <a href="#mainSection" class="animationBtn2" id="animateBtn2">подробнее о баре «альберто»</a>
         </div>
         <div class="s2-arrow arrowNext infoCompany" data-aos="fade-up">
           <a href="#s3-wrap">➔</a>
@@ -247,7 +298,7 @@
           </div>
         </div>
         <div class="s3-btnBox" data-aos="fade-right">
-          <a href="#" class="animationBtn3">подробнее о баре «альберто»</a>
+          <a href="#" class="animationBtn3" id="animateBtn3">подробнее о баре «альберто»</a>
         </div>
         <div class="s3-arrow arrowNext infoCompany" data-aos="fade-up">
           <a href="#s4-wrap">➔</a>
@@ -307,13 +358,13 @@
           <div class="s4-featureText">
             <h5 class="featuresH5">3000 композиций на любой вкус</h5>
             <div class="conuterDivWrapper">
-              <div class="counterDiv1">
+              <div class="counterDiv1" data-aos="fade-left" data-aos-delay="550">
                 <p class="featuresP" style="text-transform: none;">Зал с клубной атмосферой подойдет для проведения девичника или мальчишника</p>
               </div>
-              <div class="counterDiv2">
+              <div class="counterDiv2" data-aos="fade-left" data-aos-delay="350">
                 <p class="featuresP" style="text-transform: none;">В зале с камином можно провести романтическое свидание</p>
               </div>
-              <div class="counterDiv3">
+              <div class="counterDiv3" data-aos="fade-left" data-aos-delay="50">
                 <p class="featuresP" style="text-transform: none;">В уютном зале – отметить юбилей или корпоратив</p>
               </div>
             </div>
@@ -321,7 +372,7 @@
         </div>
       </div>
       <div class="s4-btn" data-aos="fade-right">
-        <a href="#" class="animationBtn4">забронировать столик</a>
+        <a href="#" class="animationBtn4" id="animateBtn4">забронировать столик</a>
       </div>
       <div class="s4-arrow arrowNext infoCompany" data-aos="fade-up">
         <a href="#s5-wrap">➔</a>
@@ -405,10 +456,10 @@
         <h1 class="h1-after" data-aos="fade-right">С любовью для вас трудятся</h1>
       </div>
       <div class="swiper-container__wrap-1" id="swiper-container-1-wrap">
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-prev" data-aos="fade-right" data-aos-delay="700"></div>
         <div class="swiper-container swiper-container-1" id="swiper-container-1">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
             <div class="swiper-image">
               <img src="img/slider1-1.jpg" alt="">
               <div>
@@ -418,7 +469,7 @@
             </div>
             <i>“Считаю, чтобы блюдо было вкусным, нужно уметь играть с ингредиентами. И, конечно, в процессе приготовления важны креативность и новизна</i>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-image">
               <img src="img/slider1-2.jpg" alt="">
               <div>
@@ -428,7 +479,7 @@
             </div>
             <i>“Самое главное в моей работе - сделать так, чтобы наши гости стали постоянными клиентами</i>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
             <div class="swiper-image">
               <img src="img/slider1-3.jpg" alt="">
               <div>
@@ -450,7 +501,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-next" data-aos="fade-left" data-aos-delay="700"></div>
       </div>
       <div class="s6-arrow arrowNext infoCompany" data-aos="fade-up">
         <a href="#s7-wrap">➔</a>
@@ -472,9 +523,9 @@
             <p class="featuresP featuresP-s7">Проводим постоянные акции и стараемся радовать наших гостей</p><br>
             <p class="featuresP featuresP-s7">Решите вы взять микрофон или останетесь слушателем – незабываемые впечатления после посещения Альберто вам гарантированы. Приходите и убедитесь в этом сами</p>
           </div>
-          <a href="#" class="animationBtn animationBtn5" data-aos="fade-right">хочу бонус</a>
+          <a href="#" class="animationBtn animationBtn5" data-aos="fade-right" id="animateBtn5">хочу бонус</a>
         </div>
-        <div class="s7-imageWrap"></div>
+        <div class="s7-imageWrap" data-aos="zoom-in"></div>
       </div>
       <div class="s7-headlineWrapper">
         <div class="s7-sliderHeadline">
@@ -525,10 +576,10 @@
         <h1 class="h1-after" data-aos="fade-right">наши последние публикации в instagram</h1>
       </div>
       <div class="swiper-container__wrap-3" id="swiper-container-3-wrap">
-        <div class="swiper-button-prev swiper-button-prev3"></div>
+        <div class="swiper-button-prev swiper-button-prev3" data-aos="fade-right" data-aos-delay="700"></div>
         <div class="swiper-container swiper-container-3" id="swiper-container-3">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
             <div class="swiper-image3">
               <img src="img/slider3-3.png" alt="">
               <div>
@@ -537,7 +588,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-image3">
               <img src="img/slider3-3.png" alt="">
               <div>
@@ -546,7 +597,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
             <div class="swiper-image3">
               <img src="img/slider3-3.png" alt="">
               <div>
@@ -555,36 +606,10 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="swiper-image3">
-              <img src="img/slider3-3.png" alt="">
-              <div>
-                <h5 class="featuresH5">Час назад<br>13 меток “Нравится”</h5>
-                <p class="featuresP">Незаметными шагами пришёл конец октября. Давайте<br><br><a href="#">Показать полностью...</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="swiper-image3">
-              <img src="img/slider3-3.png" alt="">
-              <div>
-                <h5 class="featuresH5">Час назад<br>13 меток “Нравится”</h5>
-                <p class="featuresP">Незаметными шагами пришёл конец октября. Давайте<br><br><a href="#">Показать полностью...</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="swiper-image3">
-              <img src="img/slider3-3.png" alt="">
-              <div>
-                <h5 class="featuresH5">Час назад<br>13 меток “Нравится”</h5>
-                <p class="featuresP">Незаметными шагами пришёл конец октября. Давайте<br><br><a href="#">Показать полностью...</a></p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
-      <div class="swiper-button-next swiper-button-next3"></div>
+      <div class="swiper-button-next swiper-button-next3" data-aos="fade-left" data-aos-delay="700"></div>
       </div>
       <div class="s8-arrow arrowNext infoCompany" data-aos="fade-up">
         <a href="#footerAnchor">➔</a>
@@ -756,7 +781,7 @@ var swiper = new Swiper('#swiper-container-3.swiper-container', {
 <script>
   var swiper = new Swiper('#swiper-container__wrap-main.swiper-container', {
     autoplay: {
-      delay: 2500,
+      delay: 2500000,
       disableOnInteraction: false,
     },
     loop: true,
@@ -774,7 +799,7 @@ var swiper = new Swiper('#swiper-container-3.swiper-container', {
   // fullpaje__JS
 </script> -->
 
-<script>  new WOW().init();  </script>
+<!-- <script>  new WOW().init();  </script> -->
 <!---------------------------------------------------------->
 </body>
 </html>

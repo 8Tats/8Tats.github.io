@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap')
 
 html, body
+  scroll-behavior: smooth
   transition: all 0.5s
   margin: 0
   padding: 0
@@ -100,31 +101,111 @@ h1, h2, h3, h4, h5, h6, p, span, input
   display: flex
   justify-content: center
   align-items: flex-end
-  a
-    font-weight: bold
-    font-size: 1.4rem
+    // &::before
+    //   content: ''
+    //   position: absolute
+    //   bottom: -.2rem
+    //   left: 0
+    //   background-color: #BD843A
+    //   height: 2px
+    //   width: 0%
+    //   transition: all 0.3s
+    // &:hover
+    //   color: #BD843A
+    //   text-decoration: none
+    // &:hover::before
+    //   width: 50%
+    // &:last-child
+    //   margin-right: 4rem
+    // &:first-child
+    //   margin-left: 6rem
+
+.headerNav
+  ul
+    padding: 0
+    list-style: none
+  > ul
+    margin: 0 2rem
+    display: flex
+    li
+      position: relative
+      margin: 0 1.3rem
+      font-size: 1.6rem
+      &:hover > ul
+        display: block
+      ul
+        position: absolute
+        min-width: 165px
+        background-color: #444444
+        padding-top: .5rem
+        transition: 0.4s
+        display: none
+        li
+          padding: .7rem 0 .7rem 1rem
+          margin: 0
+          ul
+            right: -165px
+            top: 0
+            margin: 0
+          &:hover
+            background-color: red
+            width: 100%
+            background-color: #333333
+      a
+        display: block
+        color: #fff
+        transition: 0.3s
+        &:hover
+          text-decoration: none
+          color: #BD843A
+
+.ul1
+  min-width: 100px
+
+.headerNav > li:hover .headerNav1_inside
+  display: block
+
+.headerNav1_inside
+  min-width: 130px
+  background-color: rgba(21,21,21,0.9)
+  list-style: none
+  padding: 1rem 0 1rem 0
+  position: absolute
+  margin: 0
+  display: none
+
+.linkUp
+  position: fixed
+  display: none
+  background-color: #F7AB48
+  z-index: 999
+  height: 60px
+  width: 60px
+  color: #fff
+  transform: rotate(-90deg)
+  border-radius: 50%
+  transition: 0.4s
+  bottom: 10%
+  right: 8%
+  &:hover
     color: #fff
-    margin-right: 2rem
-    transition: all 0.3s
-    position: relative
-    &::before
-      content: ''
-      position: absolute
-      bottom: -.2rem
-      left: 0
-      background-color: #BD843A
-      height: 2px
-      width: 0%
-      transition: all 0.3s
-    &:hover
-      color: #BD843A
-      text-decoration: none
-    &:hover::before
-      width: 50%
-    &:last-child
-      margin-right: 4rem
-    &:first-child
-      margin-left: 6rem
+    text-decoration: none
+    transform: rotate(-450deg)
+    border: 2px solid #fff
+  &::before
+    content: '➙'
+    position: absolute
+    line-height: 0
+    top: 50%
+    left: 17%
+    font-size: 40px
+
+.headerNav2_inside
+  top: 0
+  left: 130px
+  li
+    background-color: red
+    position: absolute
 
 .headhesive
   padding: 2.2rem 0 1.5rem 0
@@ -443,7 +524,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
 .animationBtn5:active,
 .animationBtn5:visited
   display: inline-block
-  font-size: 1.4rem
+  font-size: 1.6rem
   font-weight: 700
   text-transform: uppercase
   line-height: 1.7rem
@@ -453,7 +534,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   color: rgba(247, 171, 72, 0.75)
   text-decoration: none
   position: relative
-  transition: all 0.3s
+  transition: all 0.7s
   &::after
     transition: all 0.3s
     content: '→'
@@ -772,6 +853,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   margin-left: 2rem
 
 .footerHeadline
+  margin-bottom: 1rem
   grid-column: 1/3
 
 .footerContactsWrap
@@ -1380,7 +1462,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   height: 100vh
   overflow-y: scroll
   position: fixed
-  z-index: 91
+  z-index: 93
   transition: 0.5s
   transform: translateY(-110%)
   text-transform: uppercase
@@ -1394,118 +1476,62 @@ h1, h2, h3, h4, h5, h6, p, span, input
   flex-direction: column
   width: 95%
   margin: 0 auto
+  border: 2px solid lime
+  padding: 1rem
   a
-    font-size: 2rem
+    font-size: 17px
     text-transform: none
     color: #fff
     margin-right: 2rem
     transition: all 0.3s
     position: relative
-    span
-      font-size: 2.4rem
-      line-height: 0
-      padding-left: .5rem
+  span
+    background-color: #888888
+    height: 34px
+    width: 34px
+    color: #fff
+    position: relative
+    line-height: 0
+    &::before
+      content: '+'
+      position: absolute
+      font-size: 22px
+      top: 50%
+      left: 50%
+      transform: translateX(-50%)
 
-
-.headerNavWindowLink
+.windowLinkWrap
   border-bottom: 1px solid #1D1D1D
   display: flex
-  padding: 0 0 0 2rem
-  align-items: center
-  min-height: 46px
   justify-content: space-between
-  transition: 0.4s
-  &:last-child
-    border: none
+  align-items: center
+  min-height: 42px
+  a
+    padding-left: 1rem
 
-.headerNavWindowLink1, .headerNavWindowLink1_inside
-  background-color: #888888
-  height: 34px
-  width: 34px
-  position: relative
-  &::before
-    content: '+'
-    position: absolute
-    color: #fff
-    left: 50%
-    top: 50%
-    transform: translateX(-50%)
-    font-size: 3.3rem
+.windowLinkWrapServices
+  border: 2px solid blue
+  em
     line-height: 0
 
-.headerNavWindowLink1Active, .headerNavWindowLink1_insideActive
-  &::before
-    content: '-'
-    position: absolute
-    color: #fff
-    left: 50%
-    top: 45%
-    transform: translateX(-50%)
-    font-size: 3.3rem
-    line-height: 0
-
-// .headerNavWindowLink_inside
-//   > span
-//     background-color: #888888
-//     height: 34px
-//     width: 34px
-//     position: relative
-//     &::before
-//       content: '+'
-//       position: absolute
-//       color: #fff
-//       left: 50%
-//       top: 50%
-//       transform: translateX(-50%)
-//       font-size: 3.3rem
-//       line-height: 0
-
-
-
-.headerNavWindowLink_insideWrap
+.windowLink
+  border-bottom: 1px solid #1D1D1D
   display: flex
-  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  height: 42px
+  transition: 0.4s
+  overflow: hidden
+  a
+    padding-left: 2rem
+
+.windowLinkWrapper1
+  border: 2px solid lime
+
+.windowLinkWrapper1Active
   height: 0
   overflow: hidden
   border: none
-  transition: .4s
-
-.headerNavWindowLink_doubleInsideWrap
-  display: flex
-  flex-direction: column
-  height: 0
-  overflow: hidden
-  border: none
-  transition: .4s
-
-.headerNavWindowLink_doubleInside
-  transition: 0.4s
-  border-bottom: 1px solid #1D1D1D
-  min-height: 46px
-  display: flex
-  justify-content: space-between
-  align-items: center
-  > a
-    padding: 0 0 0 4rem
-
-.headerNavWindowLink_doubleInsideActive
-  height: auto
-  transition: 0.4s
-
-.headerNavWindowLink_insideActive
-  height: auto
-  transition: 0.4s
-
-.headerNavWindowLink_inside
-  transition: 0.4s
-  border-bottom: 1px solid #1D1D1D
-  min-height: 46px
-  display: flex
-  justify-content: space-between
-  align-items: center
-  > a
-    padding: 0 0 0 3rem
-
 
 .headerNavWindowActive
   transform: translateY(0)
@@ -1532,3 +1558,21 @@ h1, h2, h3, h4, h5, h6, p, span, input
     &:hover
       color: rgba(21,21,21, 0.85)
       border: 2px solid rgba(21,21,21, 0.75)
+
+.linkToTop
+  background-color: red
+  height: 50px
+  width: 50px
+  position: fixed
+  bottom: 30%
+  left: 30%
+  z-index: 999
+  color: #fff
+  font-size: 20px
+
+.animateBtn1Active,
+.animateBtn2Active,
+.animateBtn3Active,
+.animateBtn4Active,
+.animateBtn5Active
+  transform: translate(7%)

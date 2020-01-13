@@ -33,6 +33,31 @@ for(let anchor of mainSectionAnchor) {
   });
 };
 
+document.getElementById("buttonUp").onclick = function scrollUpFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+window.onscroll = function() {scrollFunction()}
+function scrollFunction() {
+  if(document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    document.getElementById('buttonUp').style.display = "block";
+  } else {
+    document.getElementById('buttonUp').style.display = "none";
+  }
+}
+
+let animateBtn1 = document.getElementById('animateBtn1'),
+    animateBtn2 = document.getElementById('animateBtn2'),
+    animateBtn3 = document.getElementById('animateBtn3'),
+    animateBtn4 = document.getElementById('animateBtn4'),
+    animateBtn5 = document.getElementById('animateBtn5');
+setInterval(function() {
+     animateBtn1.classList.toggle('animateBtn1Active');
+     animateBtn2.classList.toggle('animateBtn2Active');
+     animateBtn3.classList.toggle('animateBtn3Active');
+     animateBtn4.classList.toggle('animateBtn4Active');
+     animateBtn5.classList.toggle('animateBtn5Active');
+   }, 800);
 
 ////////
 let btnLight = document.querySelector('.dlBtn1'),
@@ -86,15 +111,6 @@ let btnLight = document.querySelector('.dlBtn1'),
     headerNavWindowLink1_inside = document.querySelector('.headerNavWindowLink1_inside'),
     section5Wrap = document.querySelector('.section-5_wrap');
 
-headerNavWindowLink2.onclick = function() {
-  headerNavWindowLink_insideWrap.classList.toggle('headerNavWindowLink_insideActive');
-  _headerNavWindowLink1.classList.toggle('headerNavWindowLink1Active')
-}
-
-headerNavWindowLink3.onclick = function() {
-  headerNavWindowLink1_inside.classList.toggle('headerNavWindowLink1_insideActive')
-  headerNavWindowLink_doubleInsideWrap.classList.toggle('headerNavWindowLink_doubleInsideActive');
-}
 
 btnLight.onclick = function() {
   btnDark.style.display = "block";
@@ -184,4 +200,11 @@ btnDark.onclick = function() {
   s4ContentBox.classList.remove('s4-contentBoxLight');
   s5ContentBox.classList.remove('s5-contentBoxLight');
   footerWraplight.classList.remove('footerWrapLight');
+};
+
+let windowLinkWrapServices = document.querySelector('.windowLinkWrapServices'),
+    windowLinkWrapper1 = document.querySelector('.windowLinkWrapper1');
+
+windowLinkWrapServices.onclick = function() {
+  windowLinkWrapper1.classList.toggle('windowLinkWrapper1Active');
 };
