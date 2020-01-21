@@ -77,16 +77,18 @@
 
 <div id="fullPage">
   <div class="section section-1-wrap" id="mainSection">
-    <div class="swiper-container__wrap-main">
+    <div class="swiper-container__wrap-main" id="swiper-containerMainWrap">
+      <div class="swiper-button-prev swiper-button-prevMain"></div>
       <div class="swiper-container swiper-container__main" id="swiper-container__wrap-main">
         <div class="swiper-wrapper swiper-wrapper-my">
-          <div class="swiper-slide slide-1"></div>
+          <!-- <div class="swiper-slide slide-1"></div> -->
           <div class="swiper-slide slide-2"></div>
           <div class="swiper-slide slide-3"></div>
           <div class="swiper-slide slide-4"></div>
           <div class="swiper-slide slide-5"></div>
         </div>
       </div>
+      <div class="swiper-button-next swiper-button-nextMain"></div>
     </div>
     <section class="section-1">
       <header class="headerWrap" data-aos="fade-down" data-aos-delay="500">
@@ -100,7 +102,7 @@
           <nav class="headerNav">
             <ul>
               <li>
-                <a href="#">Главная</a>
+                <a href="#" class="headerNavAnimation">Главная</a>
               </li>
               <li>
                 <a href="#">О нас</a>
@@ -171,10 +173,10 @@
                   <li><a href="#">Игровой клуб PlayStation</a></li>
                 </ul>
               </li>
-              <li><a href="#">Акции</a></li>
-              <li><a href="#">Наши события</a></li>
-              <li><a href="#">Дядя Донер</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#" class="headerNavAnimation">Акции</a></li>
+              <li><a href="#" class="headerNavAnimation">Наши события</a></li>
+              <li><a href="#" class="headerNavAnimation">Дядя Донер</a></li>
+              <li><a href="#" class="headerNavAnimation">Контакты</a></li>
             </ul>
           </nav>
           <div class="shoppingCartWrap">
@@ -247,9 +249,9 @@
         <div class="s2-btnWrapper" data-aos="fade-right">
           <a href="#mainSection" class="animationBtn2" id="animateBtn2">подробнее о баре «альберто»</a>
         </div>
-        <div class="s2-arrow arrowNext infoCompany" data-aos="fade-up">
-          <a href="#s3-wrap">➔</a>
-        </div>
+      </div>
+      <div class="s2-arrow arrowNext infoCompany" data-aos="fade-up">
+        <a href="#s3-wrap">➔</a>
       </div>
     </section>
   </div>
@@ -300,9 +302,9 @@
         <div class="s3-btnBox" data-aos="fade-right">
           <a href="#" class="animationBtn3" id="animateBtn3">подробнее о баре «альберто»</a>
         </div>
-        <div class="s3-arrow arrowNext infoCompany" data-aos="fade-up">
-          <a href="#s4-wrap">➔</a>
-        </div>
+      </div>
+      <div class="s3-arrow arrowNext infoCompany" data-aos="fade-up">
+        <a href="#s4-wrap">➔</a>
       </div>
     </div>
   </div>
@@ -374,9 +376,9 @@
       <div class="s4-btn" data-aos="fade-right">
         <a href="#" class="animationBtn4" id="animateBtn4">забронировать столик</a>
       </div>
-      <div class="s4-arrow arrowNext infoCompany" data-aos="fade-up">
-        <a href="#s5-wrap">➔</a>
-      </div>
+    </div>
+    <div class="s4-arrow arrowNext infoCompany" data-aos="fade-up">
+      <a href="#s5-wrap">➔</a>
     </div>
   </div>
 </div>
@@ -441,9 +443,9 @@
       <div class="s5-images">
 
       </div>
-      <div class="s5-arrow arrowNext infoCompany" data-aos="fade-up">
-        <a href="#s6-wrap">➔</a>
-      </div>
+    </div>
+    <div class="s5-arrow arrowNext infoCompany" data-aos="fade-up">
+      <a href="#s6-wrap">➔</a>
     </div>
   </div>
 </div>
@@ -503,9 +505,9 @@
       </div>
       <div class="swiper-button-next" data-aos="fade-left" data-aos-delay="700"></div>
       </div>
-      <div class="s6-arrow arrowNext infoCompany" data-aos="fade-up">
-        <a href="#s7-wrap">➔</a>
-      </div>
+    </div>
+    <div class="s6-arrow arrowNext infoCompany" data-aos="fade-up">
+      <a href="#s7-wrap">➔</a>
     </div>
   </div>
 </div
@@ -561,9 +563,9 @@
         </div>
 
       </div>
-      <div class="s7-arrow arrowNext infoCompany" data-aos="fade-up">
-        <a href="#s8-wrap">➔</a>
-      </div>
+    </div>
+    <div class="s7-arrow arrowNext infoCompany" data-aos="fade-up">
+      <a href="#s8-wrap">➔</a>
     </div>
   </div>
 </div>
@@ -611,9 +613,9 @@
       </div>
       <div class="swiper-button-next swiper-button-next3" data-aos="fade-left" data-aos-delay="700"></div>
       </div>
-      <div class="s8-arrow arrowNext infoCompany" data-aos="fade-up">
-        <a href="#footerAnchor">➔</a>
-      </div>
+    </div>
+    <div class="s8-arrow arrowNext infoCompany" data-aos="fade-up">
+      <a href="#footerAnchor">➔</a>
     </div>
   </div>
 </div>
@@ -626,38 +628,38 @@
         <h1 class="h1-after" data-aos="fade-right">Наши контакты</h1>
       </div>
       <div class="footerContactsWrap">
-        <div class="footerMap" data-aos="zoom-in-up">
+        <!-- <div class="footerMap" data-aos="zoom-in-up">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23232.231224189694!2d76.92737496561976!3d43.29271639980939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1577030238477!5m2!1sru!2skz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </div>
+        </div> -->
           <div class="footerContactsWrapper">
             <div class="footerContacts">
+              <div class="contactsIcon1"></div>
               <div class="contantsText">
                 <p>Республика Казахстан, ул.Гоголя 144, уг.ул. Муратбаева</p>
               </div>
-              <div class="contactsIcon1"></div>
             </div>
             <div class="footerContacts">
+              <div class="contactsIcon2"></div>
               <div class="contantsText">
                 <p>Тел.: +7 (727) 385-62-55</p>
                 <p>Моб.: +7 (705) 568-05-00</p>
                 <p>Моб.: +7 (775) 635-52-62</p>
               </div>
-              <div class="contactsIcon2"></div>
             </div>
             <div class="footerContacts">
+              <div class="contactsIcon3"></div>
               <div class="contantsText">
                 <p>E-mail:<br>
                    info@alberto.kz</p>
               </div>
-              <div class="contactsIcon3"></div>
             </div>
             <div class="footerContacts">
+              <div class="contactsIcon4"></div>
               <div class="contantsText">
                 <p>Часы работы:<br>
                    Вс-Чт: 09.00-04.00<br>
                    Пт-Сб: 09.00-05.00</p>
               </div>
-              <div class="contactsIcon4"></div>
             </div>
 
             <div class="footerNetwork">
@@ -781,10 +783,14 @@ var swiper = new Swiper('#swiper-container-3.swiper-container', {
 <script>
   var swiper = new Swiper('#swiper-container__wrap-main.swiper-container', {
     autoplay: {
-      delay: 2500000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     loop: true,
+    navigation: {
+      nextEl: '#swiper-containerMainWrap .swiper-button-next',
+      prevEl: '#swiper-containerMainWrap .swiper-button-prev',
+    },
   });
   // swiper__JS
 </script>

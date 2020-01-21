@@ -127,6 +127,8 @@ h1, h2, h3, h4, h5, h6, p, span, input
   > ul
     margin: 0 2rem
     display: flex
+    > a
+      text-shadow: 0px 0px 5px #000
     li
       position: relative
       margin: 0 1.3rem
@@ -159,6 +161,20 @@ h1, h2, h3, h4, h5, h6, p, span, input
           text-decoration: none
           color: #BD843A
 
+.headerNavAnimation
+  position: relative
+  &::before
+    content: ''
+    background-color: #BD843A
+    position: absolute
+    transition: 0.3s
+    width: 0
+    height: 2px
+    bottom: 0
+    left: 0
+  &:hover::before
+    width: 50%
+
 .ul1
   min-width: 100px
 
@@ -190,8 +206,8 @@ h1, h2, h3, h4, h5, h6, p, span, input
   &:hover
     color: #fff
     text-decoration: none
-    transform: translateY(-5px) rotate(-90deg)
-    box-shadow: 0 0 5px 1px #fff
+    transform: rotate(-450deg)
+    border: 2px solid #fff
   &::before
     content: '➙'
     position: absolute
@@ -484,6 +500,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
     letter-spacing: 0.55rem
     line-height: 4.4rem
     padding-bottom: 2rem
+    text-shadow: 0px 0px 5px #000
   > h1
     color: #F7AB48
     font-size: 8.5rem
@@ -496,13 +513,17 @@ h1, h2, h3, h4, h5, h6, p, span, input
     display: inline
     wdth: auto
     padding: .5rem 0
+    text-shadow: 0px 0px 5px #000
   > p
     padding-top: 2rem
     padding-bottom: 7rem
     font-size: 1.6rem
     color: #fff
     line-height: 2rem
+    text-shadow: 0px 0px 5px #000
 
+#animateBtn1
+  text-shadow: 0px 0px 2px #000
 
 .animationBtn,
 .animationBtn:active,
@@ -551,10 +572,6 @@ h1, h2, h3, h4, h5, h6, p, span, input
   &:hover::after
     color: #fff
 
-.animationBtnLight,
-.animationBtnLight:active,
-.animationBtnLight:visited,
-.animationBtnLight:hover,
 .animationBtn2Light,
 .animationBtn2Light:hover,
 .animationBtn2Light:active,
@@ -584,7 +601,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   position: relative
   transition: all 0.7s
   &::after
-    transition: all 0.5s
+    transition: all 0.7s
     content: '→'
     color: rgba(247, 171, 72, 0.75)
     position: absolute
@@ -620,7 +637,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 .subsequentSection
   transition: 0.5s
-  padding: 2rem 10.3rem
+  padding: 0 10.3rem
   background-color: #151515
 
 .section-3_wrap
@@ -841,7 +858,6 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 .footerContacts
   display: flex
-  justify-content: flex-end
   padding-bottom: 2.4rem
 
 
@@ -858,6 +874,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   grid-column: 1/3
 
 .footerContactsWrap
+  border: 2px solid blue
   grid-gap: 1.5rem
   display: grid
   grid-template-columns: 1fr 1fr
@@ -865,9 +882,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
 .footerContactsWrapper
   display: flex
   flex-direction: column
-  justify-content: flex-end
-  padding-top: 2.5rem
-  text-align: right
+  padding-top: .5rem
 
 .contactsIcon1
   background-image: url(img/footerIcon1.png)
@@ -888,7 +903,8 @@ h1, h2, h3, h4, h5, h6, p, span, input
     color: #fff
 
 .footerNetwork
-  padding-top: 14rem
+  padding: 14rem 0 0 2rem
+  display: flex
   > a
     color: rgba(255,255,255,0.75)
     text-decoration: none
@@ -911,7 +927,8 @@ h1, h2, h3, h4, h5, h6, p, span, input
       width: 50%
 
 .footerMap
-  min-height: 170px
+  max-width: 100%
+  border: 2px solid lime
   > iframe
     min-height: 100%
     width: 100%
@@ -920,6 +937,8 @@ h1, h2, h3, h4, h5, h6, p, span, input
   transition: 0.5s
   background-color: #E5E5E5
 
+.footerWrap
+  padding-bottom: 50px
 
 .contactsIcon1Light
   transition: 0.5s
@@ -982,8 +1001,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
 
 .networkLight, .contactsLight
   > a
-    color: #828282
-    text-shadow: 0px 0px 1px #f0f0f0
+    color: #9D9D9D
 
 
 .s5-contentBoxLight
@@ -1144,46 +1162,46 @@ h1, h2, h3, h4, h5, h6, p, span, input
   p
     color: #4f4f4f
 
-.slide-1
-  background-image: url(img/mainBgDark.png)
-  background-repeat: no-repeat
-  background-position: center
-  background-size: 100% 100%
-  height: 100%
-  width: 100%
-
-.slide-1Light
-  background-image: url(img/mainBgLight.png)
+// .slide-1
+//   background-image: url(img/mainBgDark.png)
+//   background-repeat: no-repeat
+//   background-position: right
+//   background-size: cover
+//   height: 100%
+//   width: 100%
+//
+// .slide-1Light
+//   background-image: url(img/mainBgLight.png)
 
 .slide-2
-  background-image: url(img/interior-2.jpg)
+  background-image: url(img/karaoke.jpg)
   background-repeat: no-repeat
-  background-position: center
-  background-size: 100% 100%
+  background-position: right
+  background-size: cover
   height: 100%
   width: 100%
 
 .slide-3
-  background-image: url(img/karaoke.jpg)
+  background-image: url(img/interior-2.jpg)
   background-repeat: no-repeat
-  background-position: center
-  background-size: 100% 100%
+  background-position: right
+  background-size: cover
   height: 100%
   width: 100%
 
 .slide-4
   background-image: url(img/interior.jpg)
   background-repeat: no-repeat
-  background-position: center
-  background-size: 100% 100%
+  background-position: right
+  background-size: cover
   height: 100%
   width: 100%
 
 .slide-5
   background-image: url(img/video_alberto_2.gif)
   background-repeat: no-repeat
-  background-position: center
-  background-size: 100% 100%
+  background-position: right
+  background-size: cover
   height: 100%
   width: 100%
 
@@ -1264,6 +1282,25 @@ h1, h2, h3, h4, h5, h6, p, span, input
     color: rgba(255,255,255,1)
     border: 3px solid rgba(255,255,255,1)
 
+.swiper-button-nextMain,
+.swiper-button-prevMain
+  z-index: 100
+  border: none
+  color: rgba(255,255,255,0.75)
+  font-weight: 900
+  outline: none
+  padding: 2.4rem
+  transition: 0.3s
+  &:hover
+    border: none
+
+.swiper-button-prevMain
+  left: 8%
+
+.swiper-button-nextMain
+  right: 8%
+
+
 .swiper-button-nextLight
   color: rgba(247, 171, 72, 0.75)
   border: 3px solid rgba(247, 171, 72, 0.75)
@@ -1291,6 +1328,19 @@ h1, h2, h3, h4, h5, h6, p, span, input
     color: rgba(247, 171, 72, 0.75)
   &:hover
     border: 3px solid rgba(247, 171, 72, 0.75)
+
+
+.swiper-button-nextMainLight,
+.swiper-button-prevMainLight
+  z-index: 100
+  border: none
+  color: rgba(255,255,255,0.75)
+  font-weight: 900
+  outline: none
+  padding: 2.4rem
+  transition: 0.3s
+  &:hover
+    border: none
 
 .swiper-button-next2
   color: rgba(247, 171, 72, 0.75)
@@ -1544,7 +1594,7 @@ h1, h2, h3, h4, h5, h6, p, span, input
   display: none
 
 .arrowNext
-  margin-top: 2rem
+  padding: 1.5rem 0
 
 .s2-arrowLight,
 .s3-arrowLight,

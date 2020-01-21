@@ -65,7 +65,7 @@ let btnLight = document.querySelector('.dlBtn1'),
     headerLogo = document.querySelector('.headerLogo'),
     swiperButtonNext = document.querySelector('.swiper-button-next'),
     swiperButtonPrev = document.querySelector('.swiper-button-prev'),
-    slide1Light = document.querySelector('.slide-1'),
+    // slide1Light = document.querySelector('.slide-1'),
     networkLight = document.querySelector('.network'),
     s2Arrow = document.querySelector('.s2-arrow'),
     s3Arrow = document.querySelector('.s3-arrow'),
@@ -76,7 +76,6 @@ let btnLight = document.querySelector('.dlBtn1'),
     s8Arrow = document.querySelector('.s8-arrow'),
     _headhesive = document.querySelector('.headhesive'),
     contactsLight = document.querySelector('.contacts'),
-    animationBtnLight = document.querySelector('.animationBtn'),
     animationBtnLight2 = document.querySelector('.animationBtn2'),
     animationBtnLight3 = document.querySelector('.animationBtn3'),
     animationBtnLight4 = document.querySelector('.animationBtn4'),
@@ -96,6 +95,8 @@ let btnLight = document.querySelector('.dlBtn1'),
     contactsIcon2Light = document.querySelector('.contactsIcon2'),
     contactsIcon3Light = document.querySelector('.contactsIcon3'),
     contactsIcon4Light = document.querySelector('.contactsIcon4'),
+    swiper_button_nextMain = document.querySelector('.swiper-button-nextMain'),
+    swiper_button_prevMain = document.querySelector('.swiper-button-prevMain'),
     contentBoxFooterLight = document.querySelector('.contentBoxFooter'),
     s4ContentBox = document.querySelector('.s4-contentBox'),
     s7ContentBox = document.querySelector('.s7-contentBox'),
@@ -116,7 +117,7 @@ btnLight.onclick = function() {
   btnDark.style.display = "block";
   btnLight.style.display = "none";
   headerLogo.classList.add('headerLogoLight');
-  slide1Light.classList.add('slide-1Light');
+  // slide1Light.classList.add('slide-1Light');
   // headerLight.classList.add('headerLight');
   s8ContentBoxLight.classList.add('s8-contentBoxLight');
   swiperButtonNext.classList.add('swiper-button-nextLight');
@@ -130,13 +131,14 @@ btnLight.onclick = function() {
   networkLight.classList.add('networkLight');
   contactsLight.classList.add('contactsLight');
   swiperButtonPrev.classList.add('swiper-button-prevLight');
+  swiper_button_nextMain.classList.add('swiper-button-nextMainLight');
+  swiper_button_prevMain.classList.add('swiper-button-prevMainLight');
   contentBoxFooterLight.classList.add('contentBoxFooterLight');
   contactsIcon1Light.classList.add('contactsIcon1Light');
   contactsIcon2Light.classList.add('contactsIcon2Light');
   contactsIcon3Light.classList.add('contactsIcon3Light');
   section8WrapLight.classList.add('section-8_wrapLight');
   contactsIcon4Light.classList.add('contactsIcon4Light');
-  animationBtnLight.classList.add('animationBtnLight');
   animationBtnLight2.classList.add('animationBtn2Light');
   animationBtnLight3.classList.add('animationBtn3Light');
   animationBtnLight4.classList.add('animationBtn4Light');
@@ -167,9 +169,11 @@ btnDark.onclick = function() {
   section8WrapLight.classList.remove('section-8_wrapLight');
   // headerLight.classList.remove('headerLight');
   section5Wrap.classList.remove('section-5_wrapLight');
-  slide1Light.classList.remove('slide-1Light');
+  // slide1Light.classList.remove('slide-1Light');
   s2Arrow.classList.remove('s2-arrowLight');
   s3Arrow.classList.remove('s3-arrowLight');
+  swiper_button_nextMain.classList.remove('swiper-button-nextMainLight');
+  swiper_button_prevMain.classList.remove('swiper-button-prevMainLight');
   s4Arrow.classList.remove('s4-arrowLight');
   s5Arrow.classList.remove('s5-arrowLight');
   s6Arrow.classList.remove('s6-arrowLight');
@@ -186,7 +190,6 @@ btnDark.onclick = function() {
   section6WrapLight.classList.remove('s6WrapLight');
   s7ContentBox.classList.remove('s7-contentBoxLight');
   s6ContentBox.classList.remove('s6-contentBoxLight');
-  animationBtnLight.classList.remove('animationBtnLight');
   animationBtnLight2.classList.remove('animationBtn2Light');
   animationBtnLight3.classList.remove('animationBtn3Light');
   animationBtnLight4.classList.remove('animationBtn4Light');
